@@ -1,0 +1,33 @@
+.navbar{
+   z-index: 100;
+}
+.collapse ul {
+     font-size: 1.2rem;
+     margin-right: 1.2rem;
+}
+.none{
+  display: none;
+}
+.collapse ul li{
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+.collapse ul li img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+.navbar-brand{
+   margin-left: 2rem;
+   font-size: 1.5rem;
+}
+.navbar-brand span{
+  color: #0a67e3;
+  font-size: 1.6rem;
+}
+.dropdown-item:visited{
+  background-color: #aeaeae;
+}
+.dropdown-item:active{
+  background-color: #aeaeae;
+}
