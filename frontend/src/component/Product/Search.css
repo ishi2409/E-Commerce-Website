@@ -1,57 +1,49 @@
 .searchBox {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(231, 231, 231);
-    position: fixed;
-    top: 0%;
-    left: 0;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+}
+
+.searchBox > input[type="text"] {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  border: none;
+  color: rgba(0, 0, 0, 0.637);
+  padding: 1rem 1.8rem;
+  width: 55%;
+  outline: none;
+  box-sizing: border-box;
+  height: 2.2rem;
+  font-size: 0.9rem;
+}
+
+.searchBox > input[type="submit"] {
+  height: 2.2rem;
+  border-radius: 0%;
+  background-color: #fe4c50;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s; 
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
   .searchBox > input[type="text"] {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
-    background-color: white;
-    border: none;
-    color: rgba(0, 0, 0, 0.637);
-    padding: 1vmax 2vmax;
-    width: 50%;
-    outline: none;
-    border-radius: 0%;
-    font: 300 1.1vmax cursive;
-    box-sizing: border-box;
-    height: 8%;
+    width: 100%;
+    height: 10%;
   }
-  
+
   .searchBox > input[type="submit"] {
-    height: 8%;
-    border-radius: 0%;
-    background-color: tomato;
-    border: none;
-    padding: 1vmax;
-    width: 10%;
-    font: 300 1.1vmax "Roboto";
-    cursor: pointer;
-    color: white;
-    transition: all 0.5s;
+    height: 10%;
+    width: 30%;
+    font: 300 4vw "Roboto";
   }
-  
-  .searchBox > input[type="submit"]:hover {
-    background-color: rgb(55, 97, 214);
-  }
-  
-  @media screen and (max-width: 600px) {
-    .searchBox > input[type="text"] {
-      width: 100%;
-      font: 300 4vw cursive;
-      height: 10%;
-    }
-  
-    .searchBox > input[type="submit"] {
-      height: 10%;
-      width: 30%;
-      font: 300 4vw "Roboto";
-    }
-  }
+}

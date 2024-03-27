@@ -8,8 +8,8 @@ import { Typography } from "@material-ui/core";
 
 const ConfirmOrder = () => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
-    const { user } = useSelector((state) => state.user);
-    const navigate = useNavigate();
+  const { user } = useSelector((state) => state.user);
+  const navigate = useNavigate();
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,
@@ -59,7 +59,7 @@ const ConfirmOrder = () => {
             </div>
           </div>
           <div className="confirmCartItems">
-            <Typography>Your Cart Items:</Typography>
+            <Typography>Your Cart Items</Typography>
             <div className="confirmCartItemsContainer">
               {cartItems &&
                 cartItems.map((item) => (
@@ -83,15 +83,15 @@ const ConfirmOrder = () => {
             <Typography>Order Summery</Typography>
             <div>
               <div>
-                <p>Subtotal:</p>
+                <div>Subtotal:</div>
                 <span>₹{subtotal}</span>
               </div>
               <div>
-                <p>Shipping Charges:</p>
+                <div>Shipping Charges:</div>
                 <span>₹{shippingCharges}</span>
               </div>
               <div>
-                <p>GST:</p>
+                <div>GST:</div>
                 <span>₹{tax}</span>
               </div>
             </div>
@@ -103,7 +103,9 @@ const ConfirmOrder = () => {
               <span>₹{totalPrice}</span>
             </div>
 
-            <button onClick={proceedToPayment}>Proceed To Payment</button>
+            <div className="orderSummaryButton">
+              <button onClick={proceedToPayment}>Proceed To Payment</button>
+            </div>
           </div>
         </div>
       </div>

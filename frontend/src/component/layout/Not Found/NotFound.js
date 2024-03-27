@@ -9,7 +9,7 @@ const NotFound = () => {
     <div className="PageNotFound">
       <ErrorIcon />
 
-      <Typography>Page Not Found </Typography>
+      <div>Page Not Found </div>
       <Link to="/">Home</Link>
     </div>
   );

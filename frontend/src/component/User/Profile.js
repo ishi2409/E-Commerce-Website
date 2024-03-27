@@ -20,29 +20,29 @@ const Profile = () => {
             ) : (
                 <Fragment>
                     <MetaData title={`${user.name}'s Profile`} />
+                    <h2 className="profileTitle">Profile</h2>
                     <div className="profileContainer">
                         <div className="profile_1">
-                            <h1>My Profile</h1>
                             <img src={user.avatar.url} alt={user.name} />
                             <Link to="/me/update">Edit Profile</Link>
                         </div>
-                        <div>
+                        <div className="userDetails">
                             <div>
-                                <h4>Full Name</h4>
+                                <h5>Full Name</h5>
                                 <p>{user.name}</p>
                             </div>
                             <div>
-                                <h4>Email</h4>
-                                <p>{user.email}</p>
+                                <h5>Email</h5>
+                                <p>{user.email}</p> 
                             </div>
                             <div>
-                                <h4>Joined On</h4>
+                                <h5>Joined On</h5>
                                 <p>{String(user.createdAt).substr(0, 10)}</p>
                             </div>
 
-                            <div>
-                                <Link to="/orders">My Orders</Link>
-                                <Link to="/password/update">Change Password</Link>
+                            <div className="profileButtonDetails">
+                                <Link to="/orders" style={{textDecoration:'none'}} className="profileLink">My Orders</Link>
+                                <Link to="/password/update" style={{textDecoration:'none',marginLeft:'2rem'}} className="profileLink">Change Password</Link>
                             </div>
                         </div>
                     </div>

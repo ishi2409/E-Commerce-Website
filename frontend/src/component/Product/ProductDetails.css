@@ -2,9 +2,10 @@
     background-color: rgb(255, 255, 255);
     width: 100vw;
     max-width: 100%;
-    padding: 6vmax;
+    padding: 2rem 3rem;
     box-sizing: border-box;
     display: flex;
+    margin-top: 1rem;
   }
   
   .ProductDetails > div {
@@ -27,57 +28,68 @@
   }
   
   .detailsBlock-1 > h2 {
-    color: rgb(54, 54, 54);
-    font: 600 1.6vmax "Roboto";
+    color: #282828;;
+    font-weight: 600;
   }
   
   .detailsBlock-1 > p {
-    color: rgba(54, 54, 54, 0.582);
-    font: 200 0.6vmax cursive;
+    color: #51545f;
+    font-weight: 200;
+    font-size: 0.7rem;
   }
   
   .detailsBlock-2 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.205);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
-    width: 70%;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    width: 80%;
     padding: 1vmax 0;
   }
   
   .detailsBlock-2-span {
-    font: 200 0.8vmax cursive;
-    color: rgba(0, 0, 0, 0.699);
+    color: #51545f;
+    font-size: 0.9rem;
+  }
+
+  .detailsBlock-2 > div {
+    font-size: 1.5rem;
+    color: #fe4c50;
+    font-weight: 500;
+    margin-right: 2rem;
   }
   
   .detailsBlock-3 {
-    width: 70%;
+    width: 80%;
   }
   
-  .detailsBlock-3 > h1 {
-    color: rgba(17, 17, 17, 0.795);
-    font: 400 1.8vmax "Franklin Gothic Medium";
-    margin: 1vmax 0;
-  }
   .detailsBlock-3-1 {
     display: flex;
     align-items: center;
   }
-  
+
+  .quantityTitle {
+    color: #232530;
+    margin-right: 1.5rem;
+    font-weight: 500;
+  }
+   
+  .detailsBlock-3-1-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e5e5e5;
+    padding: 0rem 0.5rem;
+  }
+
   .detailsBlock-3-1-1 > button {
     border: none;
-    background-color: rgba(0, 0, 0, 0.616);
-    height: 2rem;
-    padding: 0.5vmax;
-    padding-top: 0.2rem;
-    margin: 0.4rem;
     cursor: pointer;
-    color: white;
-    transition: all 0.5s;
-  }
-  .detailsBlock-3-1-1 > button:hover {
-    background-color: rgba(0, 0, 0, 0.767);
+    color: #232530;
+    font-weight: 800;
+    font-size: 1.5rem;
   }
   
   .detailsBlock-3-1-1 > input {
@@ -86,9 +98,16 @@
     width: 1vmax;
     text-align: center;
     outline: none;
-    font: 400 0.8vmax "Roboto";
-    /* color: rgba(0, 0, 0, 0.74); */
-    color: black;
+    color: #232530;
+    font-weight: 500;
+  }
+
+  .detailsBlock-3-1-1 > div {
+    width: 2.5rem;
+    text-align: center;
+    color: #232530;
+    font-weight: 500;
+    font-size: 1.2rem;
   }
   
   .detailsBlock-3-1 > button:last-child {
@@ -96,109 +115,124 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s;
-    background-color: tomato;
-    font: 500 0.7vmax "Roboto";
-    border-radius: 20px;
-    padding: 0.5vmax 2vmax;
+    background-color:#fe4c50;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 0.5rem 0.7rem;
+    text-transform: uppercase;
     margin: 1vmax;
     outline: none;
+    margin-left: 1rem;
   }
   
   .detailsBlock-3-1 > button:last-child:hover {
-    background-color: rgb(214, 84, 61);
+    opacity: 80%;
   }
   
-  .detailsBlock-3 > p {
-    border-top: 1px solid rgba(0, 0, 0, 0.205);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  .statusWrapper {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
     padding: 1vmax 0;
-    color: rgba(0, 0, 0, 0.651);
-    font: 400 1vmax "Roboto";
-    margin: 1vmax 0;
+    color: #232530;
+    margin-bottom: 1rem;
+  }
+
+  .statusTitle{
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
   
   .detailsBlock-4 {
-    color: rgba(0, 0, 0, 0.897);
-    font: 500 1.2vmax sans-serif;
+    color: #232530;
+    display: flex;
   }
   
   .detailsBlock-4 > p {
-    color: rgba(0, 0, 0, 0.534);
-    font: 300 0.8vmax sans-serif;
+    color: #232530;
+  }
+
+  .descriptionTitle{
+    margin-right: 1rem;
+    font-weight: 500;
   }
   
   .submitReview {
     border: none;
-    background-color: tomato;
-    font: 500 0.7vmax "Roboto";
-    border-radius: 20px;
-    padding: 0.6vmax 2vmax;
+    background-color: #fe4c50;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 0.5rem 0.7rem;
     margin: 1vmax 0;
     color: white;
     cursor: pointer;
     transition: all 0.5s;
     outline: none;
+    text-transform: uppercase;
   }
+
   .submitReview:hover {
-    background-color: rgb(197, 68, 45);
-    transform: scale(1.1);
+    opacity: 80%;
   }
   
   .submitDialog {
     display: flex;
     flex-direction: column;
   }
+
   .submitDialogTextArea {
     border: 1px solid rgba(0, 0, 0, 0.082);
     margin: 1vmax 0;
     outline: none;
     padding: 1rem;
-    font: 300 1rem "Roboto";
+    color: #232530;
   }
   
   .reviewsHeading {
-    color: #000000be;
-    font: 500 1.4vmax "Roboto";
     text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
-    padding: 1vmax;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #fe4c50;
     width: 20vmax;
-    margin: auto;
-    margin-bottom: 4vmax;
+    padding: 0.5rem 0rem;
+    margin: 0rem auto;
+    color: #1e1e27;
   }
+
   .reviews {
-    display: flex;
+    padding: 3rem;
+    display: grid;
     overflow: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   
   .reviewCard {
     flex: none;
-  
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: 1px solid rgba(56, 56, 56, 0.116);
-    width: 30vmax;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1vmax;
-    padding: 3vmax;
+    padding: 1rem;
   }
   .reviewCard > img {
     width: 5vmax;
+    margin-bottom: 0.6rem;
   }
   .reviewCard > p {
-    color: rgba(0, 0, 0, 0.836);
-    font: 600 0.9vmax "Roboto";
+    color: #232530;
   }
   .reviewCardComment {
-    color: rgba(0, 0, 0, 0.445);
-    font: 300 0.8vmax cursive;
+    color: #232530;
   }
   
   .noReviews {
-    font: 400 1.3vmax "Gill Sans";
+    font-size: 1.1rem;
+    font-weight: 500;
     text-align: center;
-    color: rgba(0, 0, 0, 0.548);
+    color: #232530;
   }
   
   @media screen and (max-width: 600px) {

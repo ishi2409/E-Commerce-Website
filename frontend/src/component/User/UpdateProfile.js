@@ -25,12 +25,11 @@ const UpdateProfile = ({ history }) => {
 
   const updateProfileSubmit = (e) => {
     e.preventDefault();
-
     const myForm = new FormData();
-
     myForm.set("name", name);
     myForm.set("email", email);
     myForm.set("avatar", avatar);
+    // console.log(myForm.set);
     dispatch(updateProfile(myForm));
   };
 
@@ -79,7 +78,7 @@ const UpdateProfile = ({ history }) => {
           <MetaData title="Update Profile" />
           <div className="updateProfileContainer">
             <div className="updateProfileBox">
-              <h2 className="updateProfileHeading">Update Profile</h2>
+              <div className="updateProfileHeading">Update Profile</div>
 
               <form
                 className="updateProfileForm"

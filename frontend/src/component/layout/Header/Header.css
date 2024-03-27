@@ -1,33 +1,131 @@
-.navbar{
-   z-index: 100;
+body{
+  background-color: #cfc1c1;
+}
+.navbarDiv{
+   display: flex;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   /* position: fixed; */
+   top: 0;
+   width: 100%;
+   height: 4.3rem;
+   background-color: white;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+.headerLogo{
+  display: flex;
+  align-items: center;
+}
+.headerLogo img{ 
+  height: 4.3rem;
+  width: auto;
 }
 .collapse ul {
-     font-size: 1.2rem;
-     margin-right: 1.2rem;
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
 }
 .none{
   display: none;
 }
-.collapse ul li{
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
+.navLink{
+  color: #1e1e27;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.navLink:hover{
+  color: #fe4c50;
+}
+.navLink.active{
+  color: #fe4c50; 
+}
+.navbarSiderOption{
+  display: flex;
+  margin-left: auto;
+  padding-right: 1.2rem;
+}
+.navbarSiderOption ul{
+  text-decoration: none;
+  display: flex;
+  height: 4.3rem;
+}
+.navbarSiderOption ul li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0rem 1rem;
+}
+.cartLogo{
+  text-decoration: none;
+  color: #1e1e27;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.cartLogo:hover{
+  color: rgb(155, 153, 153);
 }
 .collapse ul li img{
   width: 2rem;
   height: 2rem;
   border-radius: 2rem;
 }
-.navbar-brand{
-   margin-left: 2rem;
-   font-size: 1.5rem;
+.navbarTitle{
+  color: #1e1e27;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: -0.7rem;
 }
-.navbar-brand span{
-  color: #0a67e3;
-  font-size: 1.6rem;
+.navbarTitle span{
+  color:  #fe4c50;
 }
-.dropdown-item:visited{
+.speedDialIcon{
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 100%;
+}
+.dropdownMenu{
+  position: absolute;
+  top: 4.3rem;
+  right: 1rem;
+  background-color: white;
+  width: 11rem;
+  height: 0; /* Initially hide the dropdown */
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 100;
+}
+.showDropdown{
+  height: 11rem;
+}
+.dropdownMenu > button{
+  border: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+.dropdownItem{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1e1e27;
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+}
+.dropdownItem:visited{
   background-color: #aeaeae;
 }
-.dropdown-item:active{
-  background-color: #aeaeae;
+.dropdownItem:hover{
+  color: #fe4c50;
+}
+.dropdownItem:active{
+  color: #fe4c50;
+}
+.dropDownImage{
+  margin-right: 0.5rem;
 }

@@ -12,7 +12,7 @@ const ForgotPassword = () => {
   const alert = useAlert();
 
   const { error, message, loading } = useSelector(
-    (state) => state.forgotPassword
+    (state) => state.forgotPassword 
   );
 
   const [email, setEmail] = useState("");
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
           <MetaData title="Forgot Password" />
           <div className="forgotPasswordContainer">
             <div className="forgotPasswordBox">
-              <h2 className="forgotPasswordHeading">Forgot Password</h2>
+              <div className="forgotPasswordHeading">Forgot Password</div>
 
               <form
                 className="forgotPasswordForm"

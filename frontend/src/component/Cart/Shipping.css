@@ -1,28 +1,29 @@
 .shippingContainer {
-    width: 100vw;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
   .shippingBox {
     background-color: white;
-    width: 25vw;
-    height: 90vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 30vw;
     box-sizing: border-box;
     overflow: hidden;
   }
   
   .shippingHeading {
     text-align: center;
-    color: rgba(0, 0, 0, 0.664);
-    font: 400 1.3vmax "Roboto";
-    padding: 1.3vmax;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
-    width: 50%;
-    margin: auto;
+    text-transform: uppercase;
+    color: #1e1e27;
+    font-weight: 500;
+    padding: 1vmax;
+    border-bottom: 2px solid #fe4c50;
+    width: 60%;
+    margin: 1rem auto;
   }
   
   .shippingForm {
@@ -32,7 +33,7 @@
     margin: auto;
     padding: 2vmax;
     justify-content: space-evenly;
-    height: 80%;
+    height: 70%;
     transition: all 0.5s;
   }
   
@@ -40,6 +41,7 @@
     display: flex;
     width: 100%;
     align-items: center;
+    margin-bottom: 1.5rem;
   }
   
   .shippingForm > div > input,
@@ -48,9 +50,8 @@
     padding-right: 1vmax;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.267);
+    border: 1px solid #e5e5e5;
     border-radius: 4px;
-    font: 300 0.9vmax cursive;
     outline: none;
   }
   
@@ -58,24 +59,26 @@
     position: absolute;
     transform: translateX(1vmax);
     font-size: 1.6vmax;
-    color: rgba(0, 0, 0, 0.623);
+    color: #1e1e27;
   }
   
   .shippingBtn {
     border: none;
-    background-color: tomato;
+    background-color:#fe4c50;
     color: white;
-    font: 300 1vmax "Roboto";
-    width: 100%;
-    padding: 1vmax;
+    font-weight: 500;
+    width: auto;
+    padding: 0.5rem 2rem;
     cursor: pointer;
+    text-transform: uppercase;
     transition: all 0.5s;
     outline: none;
-    margin: 2vmax;
+    margin-top: 1.5rem;
+    border-radius: 2px;
   }
   
   .shippingBtn:hover {
-    background-color: rgb(179, 66, 46);
+    opacity: 80%;
   }
   
   @media screen and (max-width: 600px) {

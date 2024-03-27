@@ -1,56 +1,87 @@
 .profileContainer {
     display: flex;
-    height: 116vh;
-    width: 100vw;
-    max-width: 100%;
+    height: 70vh;
+    padding: 0rem 3rem;
     background-color: white;
   }
   
-  .profileContainer > div {
+  .profileContainer > .profile_1 {
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
+    height: 70vh;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   
-  .profileContainer > div:first-child > h1 {
-    color: rgba(0, 0, 0, 0.555);
-    font: 500 2.2vmax "Roboto";
-    transform: translateX(-10vmax) translateY(-2vmax);
+  .profileTitle {
+    margin: 2rem auto;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #1e1e27;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 3px solid #fe4c50;
+    width: 15%;
   }
   
   .profileContainer > div:first-child > img {
-    width: 42%;
+    margin-top: 2rem;
+    width: 15rem;
     border-radius: 100%;
-    transition: all 0.5s;
-    height: 20rem;
-  }
-  
-  .profileContainer > div:first-child > img:hover {
-    transform: scale(1.05);
+    height: 15rem;
   }
   
   .profileContainer > div:first-child > a {
     border: none;
-    background-color: tomato;
-    font: 400 1vmax "Roboto";
+    background-color: #fe4c50;
+    font-weight: 500;
     color: white;
     text-decoration: none;
-    padding: 0.5vmax;
-    width: 30%;
-    margin: 4vmax;
+    padding: 0.3rem 1.5rem;
     text-align: center;
     transition: all 0.5s;
+    margin-top: 2.5rem;
   }
   
   .profileContainer > div:first-child > a:hover {
-    background-color: rgb(204, 78, 56);
+    opacity: 80%;
+  }
+ 
+  .userDetails{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    padding: 2rem;
   }
   
-  .profileContainer > div:last-child {
+  .userDetails > div > h5{
+    color: #1e1e27;
+    margin-bottom: 1rem;
+  }
+  
+  .userDetails > div > p{
+    color: 51545f;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .profileButtonDetails{
+    display: flex;
+  }
+
+  .profileLink{
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #1e1e27;
+    font-weight: 500;
+  }
+
+  .profileLink:hover{
+    color: #fe4c50;
+  }
+  /* .profileContainer > div:last-child {
     justify-content: space-evenly;
     align-items: flex-start;
     padding: 3vmax;
@@ -59,7 +90,6 @@
   
   .profileContainer > div:last-child > div > h4 {
     color: black;
-    font: 400 1.2vmax "Roboto";
   }
   
   .profileContainer > div:last-child > div > p {
@@ -88,7 +118,7 @@
   
   .profileContainer > div:last-child > div:last-child > a:hover {
     background-color: rgb(31, 31, 31);
-  }
+  } */
 
   @media screen and (min-width: 645px) and (max-width:900px) {
   

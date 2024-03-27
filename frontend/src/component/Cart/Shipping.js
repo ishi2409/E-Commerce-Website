@@ -49,8 +49,7 @@ const Shipping = () => {
 
       <div className="shippingContainer">
         <div className="shippingBox">
-          <h2 className="shippingHeading">Shipping Details</h2>
-
+          <div className="shippingHeading">Shipping Details</div>
           <form
             className="shippingForm"
             encType="multipart/form-data"

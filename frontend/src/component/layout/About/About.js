@@ -10,12 +10,10 @@ const About = () => {
   };
   return (
     <div className="aboutSection">
-      <div></div>
-      <div className="aboutSectionGradient"></div>
       <div className="aboutSectionContainer">
-        <Typography component="h1">About Us</Typography>
+        {/* <Typography component="h1">About Us</Typography> */}
 
-        <div>
+        {/* <div>
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
@@ -44,7 +42,8 @@ const About = () => {
               <InstagramIcon className="instagramSvgIcon" />
             </a>
           </div>
-        </div>
+        </div> */}
+        About Us Page
       </div>
     </div>
   );

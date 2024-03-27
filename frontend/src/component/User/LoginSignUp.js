@@ -12,7 +12,7 @@ import { useAlert } from "react-alert";
 const LoginSignUp = ({ history, location }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
@@ -32,21 +32,25 @@ const LoginSignUp = ({ history, location }) => {
 
   const { name, email, password } = user;
 
-  const [avatar, setAvatar] = useState("https://www.pngitem.com/pimgs/m/9-93862_my-account-account-vector-icon-png-transparent-png.png");
-  const [avatarPreview, setAvatarPreview] = useState("https://www.pngitem.com/pimgs/m/9-93862_my-account-account-vector-icon-png-transparent-png.png");
+  const [avatar, setAvatar] = useState(
+    "https://www.pngitem.com/pimgs/m/9-93862_my-account-account-vector-icon-png-transparent-png.png"
+  );
+  const [avatarPreview, setAvatarPreview] = useState(
+    "https://www.pngitem.com/pimgs/m/9-93862_my-account-account-vector-icon-png-transparent-png.png"
+  );
 
   const loginSubmit = (e) => {
-      e.preventDefault();
-      console.error(loginEmail);
+    e.preventDefault();
+    console.error(loginEmail);
     dispatch(login(loginEmail, loginPassword));
-      if (typeof(error) != "undefined" ) {
-        if(error.statusCode >= 400){
+    if (typeof error != "undefined" && error !== null) {
+      if (error.statusCode && error.statusCode >= 400) {
         alert.success("Invalid data or email,please try again");
         return;
-        }
       }
-      alert.success("Login Succesfully");
-      navigate('/');
+    }
+    alert.success("Login Succesfully");
+    navigate("/");
   };
 
   const registerSubmit = (e) => {
@@ -76,7 +80,7 @@ const LoginSignUp = ({ history, location }) => {
     }
   };
 
-//   const redirect = location.search ? location.search.split("=")[1] : "/account";
+  //   const redirect = location.search ? location.search.split("=")[1] : "/account";
 
   useEffect(() => {
     if (error) {
@@ -85,7 +89,7 @@ const LoginSignUp = ({ history, location }) => {
     }
 
     if (isAuthenticated) {
-        navigate("/account");
+      navigate("/account");
     }
   }, [dispatch, error, alert, isAuthenticated]);
 
@@ -106,27 +110,22 @@ const LoginSignUp = ({ history, location }) => {
     }
   };
 
-    return (
-   
+  return (
     <Fragment>
       {loading ? (
         <Loader />
       ) : (
-                  <Fragment>
-                
+        <Fragment>
           <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
               <div>
                 <div className="login_signUp_toggle">
-                  <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>
-                  <p onClick={(e) => switchTabs(e, "register")}>REGISTER</p>
+                  <div onClick={(e) => switchTabs(e, "login")}>LOGIN</div>
+                  <div onClick={(e) => switchTabs(e, "register")}>REGISTER</div>
                 </div>
                 <button ref={switcherTab}></button>
               </div>
-                              <form className="loginForm"
-                                  ref={loginTab}
-                                  onSubmit={loginSubmit}
-                              >
+              <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
                 <div className="loginEmail">
                   <MailOutlineIcon />
                   <input
@@ -134,9 +133,8 @@ const LoginSignUp = ({ history, location }) => {
                     placeholder="Email"
                     required
                     value={loginEmail}
-                        onChange={(e) => setLoginEmail(e.target.value)}
+                    onChange={(e) => setLoginEmail(e.target.value)}
                     autoComplete="off"
-                        
                   />
                 </div>
                 <div className="loginPassword">
@@ -146,10 +144,9 @@ const LoginSignUp = ({ history, location }) => {
                     placeholder="Password"
                     required
                     value={loginPassword}
-                        onChange={(e) => setLoginPassword(e.target.value)}
+                    onChange={(e) => setLoginPassword(e.target.value)}
                     autoComplete="off"
-                        
-                    />
+                  />
                 </div>
                 <Link to="/password/forgot">Forget Password ?</Link>
                 <input type="submit" value="Login" className="loginBtn" />
@@ -168,9 +165,8 @@ const LoginSignUp = ({ history, location }) => {
                     required
                     name="name"
                     value={name}
-                        onChange={registerDataChange}
+                    onChange={registerDataChange}
                     autoComplete="off"
-                        
                   />
                 </div>
                 <div className="signUpEmail">
@@ -183,7 +179,6 @@ const LoginSignUp = ({ history, location }) => {
                     value={email}
                     onChange={registerDataChange}
                     autoComplete="off"
-                    
                   />
                 </div>
                 <div className="signUpPassword">
@@ -194,7 +189,7 @@ const LoginSignUp = ({ history, location }) => {
                     required
                     name="password"
                     value={password}
-                        onChange={registerDataChange}
+                    onChange={registerDataChange}
                     autoComplete="off"
                   />
                 </div>
@@ -205,9 +200,8 @@ const LoginSignUp = ({ history, location }) => {
                     type="file"
                     name="avatar"
                     accept="image/*"
-                        onChange={registerDataChange}
+                    onChange={registerDataChange}
                     autoComplete="off"
-                        
                   />
                 </div>
                 <input type="submit" value="Register" className="signUpBtn" />
@@ -215,8 +209,8 @@ const LoginSignUp = ({ history, location }) => {
             </div>
           </div>
         </Fragment>
-       )}
-   </Fragment>
+      )}
+    </Fragment>
   );
 };
 

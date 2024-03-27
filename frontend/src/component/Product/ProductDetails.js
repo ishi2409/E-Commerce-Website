@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 // import Carousel from "react-material-ui-carousel";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -22,28 +22,26 @@ import {
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const alert = useAlert();
   const navigate = useNavigate();
-  const { product, loading,error } = useSelector(
+  const { product, loading, error } = useSelector(
     (state) => state.productDetails
   );
   const { success, error: reviewError } = useSelector(
     (state) => state.newReview
   );
-  const {isAuthenticated,user } = useSelector(
-    (state) => state.user
-  );
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   // console.log(product.ratings);
   // if(typeof product !== 'undefined') {
-    // console.log("hello " + product);
-    // console.log(product.ratings);
-    // console.log("by" + product.Stock);
-  // } 
+  // console.log("hello " + product);
+  // console.log(product.ratings);
+  // console.log("by" + product.Stock);
+  // }
   const options = {
     value: product.ratings,
     readOnly: true,
@@ -78,7 +76,6 @@ const ProductDetails = () => {
   };
 
   const reviewSubmitHandler = () => {
-
     if (isAuthenticated) {
       const myForm = new FormData();
       myForm.set("rating", rating);
@@ -86,11 +83,9 @@ const ProductDetails = () => {
       myForm.set("productId", id);
       dispatch(newReview(myForm));
       setOpen(false);
+    } else {
+      navigate("/login");
     }
-    else {
-      navigate("/login")
-    }
-   
   };
 
   useEffect(() => {
@@ -112,53 +107,53 @@ const ProductDetails = () => {
   }, [dispatch, id, error, alert, reviewError, success]);
 
   // useEffect(() => {
-   
+
   //   console.log("hello");
   //   dispatch(getProductDetails(id));
   // }, [dispatch,id,alert,error]);
-  
+
   console.log("picture");
 
   return (
     <>
-      
-       {loading ? (
+      {loading ? (
         <Loader />
       ) : (
         <Fragment>
           <MetaData title={`${product.name} -- ECOMMERCE`} />
           <div className="ProductDetails">
             <div>
-                {product.images &&
-              product.images.map((item, i) => (
-                    <img
-                      className="CarouselImage"
-                      key={i}
-                      src={item.url}
-                      alt={`${i} Slide`}
-                    />
-                  ))}
+              {product.images &&
+                product.images.map((item, i) => (
+                  <img
+                    className="CarouselImage"
+                    key={i}
+                    src={item.url}
+                    alt={`${i} Slide`}
+                  />
+                ))}
             </div>
-      
+
             <div>
               <div className="detailsBlock-1">
                 <h2>{product.name}</h2>
                 <p>Product # {product._id}</p>
               </div>
               <div className="detailsBlock-2">
-                 <Rating {...options} />
+                <div>{`₹${product.price}`}</div>
+                <Rating {...options} style={{fontSize:'1.2rem'}}/>
                 <span className="detailsBlock-2-span">
-                  {" "}
+                  &nbsp;
                   ({product.numOfReviews} Reviews)
                 </span>
               </div>
               <div className="detailsBlock-3">
-                <h1>{`₹${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
+                <div className="quantityTitle">Quantity:</div>
                   <div className="detailsBlock-3-1-1">
-                    <button onClick={decreaseQuantity}>-</button>
-                    {quantity}
-                    <button onClick={increaseQuantity}>+</button>
+                    <button onClick={decreaseQuantity} style={{backgroundColor:'white'}}>-</button>
+                    <div>{quantity}</div>
+                    <button onClick={increaseQuantity} style={{backgroundColor:'white'}}>+</button>
                   </div>
                   <button
                     disabled={product.Stock < 1 ? true : false}
@@ -168,24 +163,25 @@ const ProductDetails = () => {
                   </button>
                 </div>
 
-                <p>
-                  Status:
+                <div className="statusWrapper">
+                  <div className="statusTitle">Status:</div>
                   <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
-                    {product.Stock < 1 ? "OutOfStock" : "InStock"}
+                    {product.Stock < 1 ? "Out Of Stock" : "In Stock"}
                   </b>
-                </p>
+                </div>
               </div>
 
               <div className="detailsBlock-4">
-                Description : <p>{product.description}</p>
+                <div className="descriptionTitle">Description:</div>
+                <p>{product.description}</p>
               </div>
 
               <button onClick={submitReviewToggle} className="submitReview">
                 Submit Review
               </button>
             </div>
-            </div>
-       <Dialog
+          </div>
+          <Dialog
             aria-labelledby="simple-dialog-title"
             open={open}
             onClose={submitReviewToggle}
@@ -218,8 +214,6 @@ const ProductDetails = () => {
 
           <h3 className="reviewsHeading">REVIEWS</h3>
 
-         
-
           {product.reviews && product.reviews[0] ? (
             <div className="reviews">
               {product.reviews &&
@@ -231,10 +225,9 @@ const ProductDetails = () => {
             <p className="noReviews">No Reviews Yet</p>
           )}
         </Fragment>
-       )}
-    </> 
+      )}
+    </>
   );
 };
 
 export default ProductDetails;
-

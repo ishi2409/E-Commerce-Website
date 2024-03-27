@@ -1,4 +1,4 @@
-.banner {
+/* .banner {
     background-image: url("https://uploads-ssl.webflow.com/614d610a3dd0725153e51ded/6222149bfbdb5b0645ae4c0e_eCommerce-Website-Components-photo.jpeg");
     background-position: center;
     background-repeat: no-repeat;
@@ -44,23 +44,27 @@
     margin-top: 6rem;
     width: 100vw;
     height: 100vmin;
-    /* background-color: #ffffff; */
     position: absolute;
     top: 0%;
     left: 0;
-    /* clip-path: polygon(100% 78%, 0 93%, 100% 100%); */
     max-width: 100%;
+  } */
+
+  .carouselDiv{
+    height: auto;
+    width: auto;
+    margin: 2rem 3rem;
   }
   
   .homeHeading {
     text-align: center;
-    font-family: Roboto;
-    font-size: 1.4vmax;
-    border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #fe4c50;
     width: 20vmax;
-    padding: 1vmax;
-    margin: 5vmax auto;
-    color: rgb(0, 0, 0, 0.7);
+    padding: 0.5rem 0rem;
+    margin: 0 auto 2rem auto;
+    color: #1e1e27;
   }
   
   .container {
@@ -73,44 +77,62 @@
   }
   
   .productCard {
-    width: 14vmax;
+    width: 12rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    color: rgb(48, 48, 48);
     margin: 2vmax;
     transition: all 0.5s;
-    padding-bottom: 0.5vmax;
+    /* border: 2px solid black; */
   }
   
   .productCard > img {
     width: 14vmax;
+    padding: 1.5rem;
   }
   
   .productCard > div {
-    margin: 0.5vmax;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: #1e1e27;
+    margin-top: 0.7rem;
   }
   
   .productCardSpan {
     margin: 0.5vmax;
-    font: 300 0.7vmax "Roboto";
+    font: 500 0.7vmax;
   }
   
   .productCard > p {
-    font-family: "Roboto";
-    font-size: 1.2vmax;
+    font-size: 1.2rem;
     margin: 1vmax 0.5vmax;
     margin-bottom: 0;
+    color: #1e1e27;
+    font-weight: 500;
   }
   
   .productCard > span {
     margin: 0.5vmax;
-    color: tomato;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 1vmax;
+    color: #fe4c50;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .addToCartButton{
+    width: 100%;
+  }
+
+  .addToCartButton > button{
+    border: none;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #fe4c50;
+    margin-top: 1rem;
+    padding: 0.4rem 0rem;
   }
   
   .productCard:hover {
