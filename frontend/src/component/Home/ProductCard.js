@@ -31,9 +31,6 @@ const ProductCard = ({ product }) => {
         <span className="productCardSpan">({product.numOfReviews})</span>
       </div>
       <span>{`₹${product.price}`}</span>
-      {/* <div className={`${hovered ? "hoverAddToCartButton":"addToCartButton"}`}>
-        <button>ADD TO CART</button>
-      </div> */}
     </Link>
   );
 };

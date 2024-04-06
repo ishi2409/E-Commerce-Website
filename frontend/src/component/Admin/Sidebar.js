@@ -13,51 +13,47 @@ import PeopleIcon from "@material-ui/icons/People";
 import RateReviewIcon from "@material-ui/icons/RateReview";
 
 const Sidebar = () => {
-    return (
-        <div className="sidebar">
-            <Link to="/">
-               <p className="logo">Admin Panel</p> 
-            </Link>
-            <Link to="/admin/dashboard">
-                <p>
-                    <DashboardIcon /> Dashboard
-                </p>
-            </Link>
-            <Link>
-                <TreeView
-                    defaultCollapseIcon={<ExpandMoreIcon />}
-                    defaultExpandIcon={<ImportExportIcon />}
-                >
-                    <TreeItem nodeId="1" label="Products">
-                        <Link to="/admin/products">
-                            <TreeItem nodeId="2" label="All" icon={<PostAddIcon />} />
-                        </Link>
-
-                        <Link to="/admin/product">
-                            <TreeItem nodeId="3" label="Create" icon={<AddIcon />} />
-                        </Link>
-                    </TreeItem>
-                </TreeView>
-            </Link>
-            <Link to="/admin/orders">
-                <p>
-                    <ListAltIcon />
-                    Orders
-                </p>
-            </Link>
-            <Link to="/admin/users">
-                <p>
-                    <PeopleIcon /> Users
-                </p>
-            </Link>
-            <Link to="/admin/reviews">
-                <p>
-                    <RateReviewIcon />
-                    Reviews
-                </p>
-            </Link>
+  return (
+    <div className="sidebar">
+      <div className="logo">Admin Panel</div>
+      <Link to="/admin/dashboard">
+        <div>
+          <DashboardIcon /> Dashboard
         </div>
-    );
+      </Link>
+      <Link>
+        <TreeView
+          defaultCollapseIcon={<ExpandMoreIcon />}
+          defaultExpandIcon={<ImportExportIcon />}
+        >
+          <TreeItem nodeId="1" label="Products">
+            <Link to="/admin/products">
+              <TreeItem nodeId="2" label="All" icon={<PostAddIcon />} />
+            </Link>
+
+            <Link to="/admin/product">
+              <TreeItem nodeId="3" label="Create" icon={<AddIcon />} />
+            </Link>
+          </TreeItem>
+        </TreeView>
+      </Link>
+      <Link to="/admin/orders">
+        <div>
+          <ListAltIcon /> Orders
+        </div>
+      </Link>
+      <Link to="/admin/users">
+        <div>
+          <PeopleIcon /> Users
+        </div>
+      </Link>
+      <Link to="/admin/reviews">
+        <div>
+          <RateReviewIcon /> Reviews
+        </div>
+      </Link>
+    </div>
+  );
 };
 
 export default Sidebar;

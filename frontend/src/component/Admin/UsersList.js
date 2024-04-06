@@ -54,14 +54,14 @@ const UsersList = () => {
     {
       field: "email",
       headerName: "Email",
-      minWidth: 200,
-      flex: 1,
+      minWidth: 150,
+      flex: 0.5,
     },
     {
       field: "name",
       headerName: "Name",
-      minWidth: 150,
-      flex: 0.5,
+      minWidth: 100,
+      flex: 0.2,
     },
 
     {
@@ -92,6 +92,7 @@ const UsersList = () => {
             </Link>
 
             <Button
+              style={{marginRight:'-1.4rem'}}
               onClick={() =>
                 deleteUserHandler(params.getValue(params.id, "id"))
               }
@@ -122,8 +123,8 @@ const UsersList = () => {
 
       <div className="dashboard">
         <SideBar />
-        <div className="productListContainer">
-          <h1 id="productListHeading">ALL USERS</h1>
+        <div className="productListContainer" style={{marginBottom:'3rem'}}>
+          <div id="productListHeading">ALL USERS</div>
 
           <DataGrid
             rows={rows}

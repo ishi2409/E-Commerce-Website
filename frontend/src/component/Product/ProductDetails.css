@@ -5,7 +5,7 @@
     padding: 2rem 3rem;
     box-sizing: border-box;
     display: flex;
-    margin-top: 1rem;
+    margin-top: 5.3rem;
   }
   
   .ProductDetails > div {
@@ -21,10 +21,6 @@
   
   .ProductDetails > div:last-child {
     align-items: flex-start;
-  }
-  
-  .CarouselImage {
-    width: 20vmax;
   }
   
   .detailsBlock-1 > h2 {
@@ -194,8 +190,8 @@
     font-weight: 600;
     font-size: 1.5rem;
     border-bottom: 3px solid #fe4c50;
-    width: 20vmax;
-    padding: 0.5rem 0rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
     margin: 0rem auto;
     color: #1e1e27;
   }

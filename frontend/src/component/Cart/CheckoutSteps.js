@@ -24,7 +24,7 @@ const CheckoutSteps = ({ activeStep }) => {
   const stepStyles = {
     boxSizing: "border-box",
     padding: '0.5rem',
-    margin:'1.5rem 3rem',
+    margin:'5.7rem 3rem 0rem 3rem',
   };
 
   return (

@@ -1,20 +1,31 @@
 .orderDetailsPage {
     background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-top: 4.3rem;
   }
-  
-  .orderDetailsContainer > h1 {
-    font: 300 3vmax "Roboto";
-    margin: 4vmax 0;
-    color: tomato;
+
+  .orderNumHeading{
+    font-size: 1.4rem;
+    color: #fe4c50;
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    justify-content: center;
   }
   
   .orderDetailsContainer {
-    padding: 5vmax;
-    padding-bottom: 0%;
+    padding: 3rem 1rem 3rem 3rem;
   }
   
   .orderDetailsContainer > p {
-    font: 400 1.8vmax "Roboto";
+    color: #1e1e27;
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #fe4c50;
   }
   
   .orderDetailsContainerBox,
@@ -28,46 +39,59 @@
   }
   
   .orderDetailsContainerBox > div > p {
-    font: 400 1.4vmax "Roboto";
-    color: black;
+    color: #232530;
+    font-weight: 500;
   }
   .orderDetailsContainerBox > div > span {
     margin: 0 1vmax;
-    font: 100 1.4vmax "Roboto";
-    color: #575757;
+    color: #51545f;
   }
   
   .orderDetailsCartItems > p {
-    font: 400 2.4vmax "Roboto";
+    color: #1e1e27;
+    font-weight: 600;
+    font-size: 1.3rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #fe4c50;
   }
   
   .orderDetailsCartItems {
-    padding: 2vmax 5vmax;
-    border-top: 1px solid rgba(0, 0, 0, 0.164);
+    padding: 3rem 3rem 3rem 1rem;
+    width: 100%;
+  }
+
+  .orderDetailsCartItemsContainer {
+    max-height: 20vmax;
+    overflow-y: auto;
+  }
+
+  .orderDetailRow {
+    margin-bottom: 1rem;
   }
   
   .orderDetailsCartItemsContainer > div {
     display: flex;
-    font: 400 1vmax "Roboto";
     align-items: center;
-    margin: 2vmax 0;
+    justify-content: space-between;
+    font-weight: 500;
   }
   
   .orderDetailsCartItemsContainer > div > img {
-    width: 3vmax;
+    width: 3.5vmax;
+    height: 3.5vmax;
   }
   
   .orderDetailsCartItemsContainer > div > a {
-    color: #575757;
-    margin: 0 2vmax;
+    color: #1e1e27;
     width: 60%;
     text-decoration: none;
-    font-size: 1rem;
   }
   
   .orderDetailsCartItemsContainer > div > span {
-    font: 100 1.4vmax "Roboto";
-    color: #5e5e5e;
+    color: #1e1e27;
+    font-weight: 500;
   }
   
   

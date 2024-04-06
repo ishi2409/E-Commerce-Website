@@ -31,20 +31,6 @@ const Footer = () => {
         </div>
       </div>
       <div className="footerContainer">
-        {/* <div className="leftFooter">
-          <div>
-            <div className="appTitle">DOWNLOAD OUR APP</div>
-            <p>Download App for Android and IOS mobile phone</p>
-          </div>
-          <img
-            src="https://cdn.mos.cms.futurecdn.net/Q2oLsPvoGLpzWuDqZgzANH.jpg"
-            alt="playstore"
-          />
-          <img
-            src="https://www.vectorlogo.zone/logos/apple_appstore/apple_appstore-ar21.png"
-            alt="Appstore"
-          />
-        </div> */}
         <div className="midFooter">
           <div>High Quality is our first priority</div>
           <div style={{marginTop:'0.5rem'}}>Copyrights {year} &copy; ishikapatel2409</div>

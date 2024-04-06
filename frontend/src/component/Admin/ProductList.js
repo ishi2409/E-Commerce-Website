@@ -71,13 +71,13 @@ const ProductList = () => {
   // }, [dispatch, alert]);
 
   const columns = [
-    { field: "id", headerName: "Product ID", minWidth: 200, flex: 0.5 },
+    { field: "id", headerName: "Product ID", minWidth: 250, flex: 0.5 },
 
     {
       field: "name",
       headerName: "Name",
-      minWidth: 350,
-      flex: 1,
+      minWidth: 200,
+      flex: 0.5
     },
     {
       field: "stock",
@@ -91,7 +91,7 @@ const ProductList = () => {
       field: "price",
       headerName: "Price",
       type: "number",
-      minWidth: 270,
+      minWidth: 100,
       flex: 0.5,
     },
 
@@ -110,6 +110,7 @@ const ProductList = () => {
             </Link>
 
             <Button
+              style={{marginRight:'-1.4rem'}}
               onClick={() =>
                 deleteProductHandler(params.getValue(params.id, "id"))
               }
@@ -141,7 +142,7 @@ const ProductList = () => {
       <div className="dashboard">
         <SideBar />
         <div className="productListContainer">
-          <h1 id="productListHeading">ALL PRODUCTS</h1>
+          <div id="productListHeading">ALL PRODUCTS</div>
 
           <DataGrid
             rows={rows}

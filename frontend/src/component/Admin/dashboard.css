@@ -1,28 +1,26 @@
 .dashboard {
+    margin-top: 3rem;
+    padding: 3rem;
     width: 100vw;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    position: absolute;
+    grid-template-columns: 1fr 4fr;
     z-index: 98;
-  }
-  p{
-    /* margin-bottom: 0.5rem; */
   }
   
   .dashboardContainer {
-    border-left: 1px solid rgba(0, 0, 0, 0.13);
-    background-color: rgb(255, 255, 255);
-    padding: 3rem 0;
+    background-color: white;
   }
   
   .dashboardContainer > h1 {
-    color: rgba(0, 0, 0, 0.733);
-    font: 300 2rem "Roboto";
-    text-align: center;
-    width: 50%;
-    padding: 1.5rem;
-    margin: auto;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #fe4c50;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    color: #1e1e27;
+    text-transform: uppercase;
   }
   
   .dashboardSummary {
@@ -35,17 +33,15 @@
     justify-content: center;
   }
   .dashboardSummary > div > p {
-    background-color: rgba(70, 117, 218, 0.932);
-    color: white;
-    font: 300 1.3rem "Roboto";
+    color:#1e1e27;
+    font-weight: 500;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     width: 100%;
     margin: 0 2rem;
   }
   .dashboardSummaryBox2 > a {
-    color: rgb(0, 0, 0);
-    font: 300 2vw "Roboto";
+    color: #1e1e27;
     text-align: center;
     background-color: rgb(255, 233, 174);
     text-decoration: none;
@@ -53,6 +49,8 @@
     width: 10vmax;
     height: 10vmax;
     margin: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -74,13 +72,8 @@
   }
   
   .lineChart {
-    width: 80%;
-    margin: auto;
-  }
-  
-  .doughnutChart {
-    width: 30vmax;
-    margin: auto;
+    width: 70%;
+    margin: 3rem auto;
   }
   
   @media screen and (max-width: 600px) {

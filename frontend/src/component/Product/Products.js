@@ -23,13 +23,14 @@ const categories = [
 
 const Products = () => {
   const dispatch = useDispatch();
-    const alert = useAlert();
-    const { keyword } = useParams();
+  const alert = useAlert();
+  const { keyword } = useParams();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 25000]);
   const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("");
 
   const {
     products,
@@ -57,78 +58,96 @@ const Products = () => {
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
   }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
 
-    return (
+  return (
     <Fragment>
       {loading ? (
         <Loader />
       ) : (
         <Fragment>
           <MetaData title="PRODUCTS -- ECOMMERCE" />
-          <h2 className="productsHeading">Products</h2>
+          <div className="productContainer">
+            <div className="filterBox">
+              <div className="sliderTitle">Categories</div>
+              <ul className="categoryBox">
+                {categories.map((category) => (
+                  <li
+                    className={`category-link ${
+                      category === activeCategory ? "active" : ""
+                    }`}
+                    key={category}
+                    onClick={() => {
+                      setCategory(category);
+                      setActiveCategory(category);
+                    }}
+                  >
+                    {category}
+                  </li>
+                ))}
+              </ul>
 
-          <div className="products">
-            {products &&
-              products.map((product) => (
-                <ProductCard key={product._id} product={product} />
-              ))}
-          </div>
+              <div className="sliderTitle">Price</div>
+              <div className="sliderWrapper">
+                <p style={{ marginBottom: "0.3rem" }}>Set Price Range:</p>
+                <Slider
+                  value={price}
+                  onChange={priceHandler}
+                  valueLabelDisplay="auto"
+                  aria-labelledby="range-slider"
+                  min={0}
+                  max={25000}
+                  style={{ color: "#1e1e27" }}
+                />
+              </div>
 
-          <div className="filterBox">
-            <Typography>Price</Typography>
-            <Slider
-              value={price}
-              onChange={priceHandler}
-              valueLabelDisplay="auto"
-              aria-labelledby="range-slider"
-              min={0}
-              max={25000}
-            />
-
-            <Typography>Categories</Typography>
-            <ul className="categoryBox">
-              {categories.map((category) => (
-                <li
-                  className="category-link"
-                  key={category}
-                  onClick={() => setCategory(category)}
-                >
-                  {category}
-                </li>
-              ))}
-            </ul>
-
-            <fieldset>
-              <Typography component="legend">Ratings</Typography>
-              <Slider
-                value={ratings}
-                onChange={(e, newRating) => {
-                  setRatings(newRating);
-                }}
-                aria-labelledby="continuous-slider"
-                valueLabelDisplay="auto"
-                min={0}
-                max={5}
-              />
-            </fieldset>
-          </div>
-          {resultPerPage < count && (
-              <div className="paginationBox">
-              <Pagination
-                activePage={currentPage}
-                itemsCountPerPage={resultPerPage}
-                totalItemsCount={productsCount}
-                onChange={setCurrentPageNo}
-                nextPageText="Next"
-                prevPageText="Prev"
-                firstPageText="1st"
-                lastPageText="Last"
-                itemClass="page-item"
-                linkClass="page-link"
-                activeClass="pageItemActive"
-                activeLinkClass="pageLinkActive"
-              />
+              <fieldset>
+                <div className="sliderTitle" component="legend">
+                  Ratings
+                </div>
+                <div className="sliderWrapper">
+                  <p style={{ marginBottom: "0.3rem" }}>Set Rating Range:</p>
+                  <Slider
+                    value={ratings}
+                    onChange={(e, newRating) => {
+                      setRatings(newRating);
+                    }}
+                    aria-labelledby="continuous-slider"
+                    valueLabelDisplay="auto"
+                    min={0}
+                    max={5}
+                    style={{ color: "#1e1e27" }}
+                  />
+                </div>
+              </fieldset>
             </div>
-          )}
+            <div className="productWrapper">
+              <h2 className="productsHeading">Products</h2>
+
+              <div className="products">
+                {products &&
+                  products.map((product) => (
+                    <ProductCard key={product._id} product={product} />
+                  ))}
+              </div>
+              {resultPerPage < count && (
+              <div className="paginationBox">
+                <Pagination
+                  activePage={currentPage}
+                  itemsCountPerPage={resultPerPage}
+                  totalItemsCount={productsCount}
+                  onChange={setCurrentPageNo}
+                  nextPageText="Next"
+                  prevPageText="Prev"
+                  firstPageText="1st"
+                  lastPageText="Last"
+                  itemClass="page-item"
+                  linkClass="page-link"
+                  activeClass="pageItemActive"
+                  activeLinkClass="pageLinkActive"
+                />
+              </div>
+            )}
+            </div>
+          </div>
         </Fragment>
       )}
     </Fragment>

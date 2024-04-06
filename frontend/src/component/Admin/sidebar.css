@@ -1,37 +1,48 @@
 .sidebar {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 4rem 0;
+    padding: 1rem 0;
   }
   .logo{
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-left: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fe4c50;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    padding: 1rem 0rem;
   }
-  
   .sidebar > a:first-child {
     padding: 0;
   }
   .sidebar > a > img {
     width: 100%;
-    transition: all 0.5s;
   }
   
   .sidebar > a > img:hover {
-    filter: drop-shadow(0 0 10px tomato);
+    color: #fe4c50;
   }
   .sidebar a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.493);
-    font: 200 1rem "Roboto";
-    padding: 2rem;
-    transition: all 0.5s;
+    color: #1e1e27;
+    padding: 1rem;
+    border: solid 1px #e5e5e5;
+    /* font: 200 1rem "Roboto"; */
+    /* padding: 2rem; */
   }
   .sidebar a:hover {
-    color: tomato;
-    transform: scale(1.1);
+    color: #fe4c50;
   }
+
+  .sidebar a:link {
+    color: #1e1e27;
+  }
+
+  .sidebar a:active {
+    color: #fe4c50 !important;
+  }
+
+  
   
   .sidebar a > P {
     display: flex;

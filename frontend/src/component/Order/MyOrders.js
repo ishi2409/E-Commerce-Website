@@ -33,17 +33,16 @@ const MyOrders = () => {
     },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Items Quantity",
       type: "number",
-      minWidth: 150,
-      flex: 0.3,
+      minWidth: 250,
     },
 
     {
       field: "amount",
       headerName: "Amount",
       type: "number",
-      minWidth: 270,
+      minWidth: 200,
       flex: 0.5,
     },
 

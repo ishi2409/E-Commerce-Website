@@ -1,35 +1,38 @@
 .newProductContainer {
     width: 100%;
     box-sizing: border-box;
-    background-color: rgb(221, 221, 221);
-    border-left: 1px solid rgba(0, 0, 0, 0.158);
     display: flex;
     flex-direction: column;
-    height: 100vh;
   }
-  .newProductContainer h1 {
-    color: rgba(0, 0, 0, 0.733);
-    font: 300 2rem "Roboto";
+  .newProductContainer .newProductTitle {
     text-align: center;
+    text-transform: uppercase;
+    color: #1e1e27;
+    font-weight: 500;
+    padding: 1vmax;
+    border-bottom: 2px solid #fe4c50;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
   
   .createProductForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    padding: 3vmax;
+    margin: 0rem auto;
+    padding: 2vmax;
     justify-content: space-evenly;
     height: 70%;
-    width: 50%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+    transition: all 0.5s;
   }
   
   .createProductForm > div {
     display: flex;
     width: 100%;
     align-items: center;
+    margin-bottom: 0.5rem;
   }
   .createProductForm > div > input,
   .createProductForm > div > select,
@@ -38,9 +41,8 @@
     padding-right: 1vmax;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.267);
+    border: 1px solid #e5e5e5;
     border-radius: 4px;
-    font: 300 0.9vmax cursive;
     outline: none;
   }
   
@@ -48,7 +50,7 @@
     position: absolute;
     transform: translateX(1vmax);
     font-size: 1.6vmax;
-    color: rgba(0, 0, 0, 0.623);
+    color: #1e1e27;
   }
   
   #createProductFormFile > input {
@@ -60,13 +62,12 @@
     cursor: pointer;
     width: 100%;
     z-index: 2;
-    height: 5vh;
+    height: 6vh;
     border: none;
     margin: 0%;
-    font: 400 0.8vmax cursive;
     transition: all 0.5s;
     padding: 0 1vmax;
-    color: rgba(0, 0, 0, 0.623);
+    color: #1e1e27;
     background-color: rgb(255, 255, 255);
   }
   
@@ -83,22 +84,23 @@
     width: 3vmax;
     margin: 0 0.5vmax;
   }
-  #createProductBtn {
+  #createProductButton {
     border: none;
-    background-color: tomato;
+    background-color:#fe4c50;
     color: white;
-    font: 300 0.9vmax "Roboto";
-    width: 100%;
-    padding: 0.8vmax;
+    font-weight: 500;
+    width: auto;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
+    text-transform: uppercase;
     transition: all 0.5s;
-    border-radius: 4px;
     outline: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+    margin-bottom: 1rem;
+    border-radius: 2px;
   }
   
   #createProductBtn:hover {
-    background-color: rgb(179, 66, 46);
+    opacity: 80%;
   }
   
   @media screen and (max-width: 600px) {

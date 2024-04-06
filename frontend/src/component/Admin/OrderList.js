@@ -64,9 +64,9 @@ const OrderList = ({ history }) => {
     },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Items Quantity",
       type: "number",
-      minWidth: 150,
+      minWidth: 210,
       flex: 0.4,
     },
 
@@ -74,7 +74,7 @@ const OrderList = ({ history }) => {
       field: "amount",
       headerName: "Amount",
       type: "number",
-      minWidth: 270,
+      minWidth: 200,
       flex: 0.5,
     },
 
@@ -93,6 +93,7 @@ const OrderList = ({ history }) => {
             </Link>
 
             <Button
+              style={{marginRight:"-1.4rem"}}
               onClick={() =>
                 deleteOrderHandler(params.getValue(params.id, "id"))
               }

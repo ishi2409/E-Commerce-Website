@@ -15,7 +15,7 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 30vw;
-    height: 28rem;
+    height: calc(12rem + 20vmax);
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -54,7 +54,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.5rem;
     padding: 2vmax 2.5vmax;
     justify-content: space-evenly;
     height: 70%;

@@ -68,14 +68,14 @@ const ProductReviews = () => {
       field: "user",
       headerName: "User",
       minWidth: 200,
-      flex: 0.6,
+      flex: 0.4,
     },
 
     {
       field: "comment",
       headerName: "Comment",
-      minWidth: 350,
-      flex: 1,
+      minWidth: 250,
+      flex: 0.5,
     },
 
     {
@@ -172,7 +172,7 @@ const ProductReviews = () => {
               autoHeight
             />
           ) : (
-            <h1 className="productReviewsFormHeading">No Reviews Found</h1>
+            <h3 style={{display:'flex',justifyContent:'center'}}>No Reviews Found</h3>
           )}
         </div>
       </div>

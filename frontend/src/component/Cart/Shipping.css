@@ -1,10 +1,11 @@
 .shippingContainer {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0rem;
 }
   
   .shippingBox {
@@ -20,9 +21,9 @@
     text-transform: uppercase;
     color: #1e1e27;
     font-weight: 500;
-    padding: 1vmax;
     border-bottom: 2px solid #fe4c50;
-    width: 60%;
+    width: max-content;
+    padding: 0.5rem 1rem;
     margin: 1rem auto;
   }
   
@@ -73,7 +74,7 @@
     text-transform: uppercase;
     transition: all 0.5s;
     outline: none;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     border-radius: 2px;
   }
   

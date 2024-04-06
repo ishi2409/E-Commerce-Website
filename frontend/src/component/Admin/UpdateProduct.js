@@ -137,7 +137,7 @@ const UpdateProduct = () => {
             encType="multipart/form-data"
             onSubmit={updateProductSubmitHandler}
           >
-            <h1>Create Product</h1>
+            <div className="newProductTitle">Update Product</div>
             <div>
               <SpellcheckIcon />
               <input
@@ -221,7 +221,7 @@ const UpdateProduct = () => {
             </div>
 
             <Button
-              id="createProductBtn"
+              id="createProductButton"
               type="submit"
               disabled={loading ? true : false}
             >

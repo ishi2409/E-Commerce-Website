@@ -1,6 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-// import Carousel from "react-material-ui-carousel";
-import { Carousel } from "react-responsive-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -23,6 +21,7 @@ import {
 import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
 import { useNavigate, useParams } from "react-router-dom";
+import Carousel from "react-bootstrap/Carousel";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -123,15 +122,20 @@ const ProductDetails = () => {
           <MetaData title={`${product.name} -- ECOMMERCE`} />
           <div className="ProductDetails">
             <div>
-              {product.images &&
-                product.images.map((item, i) => (
-                  <img
-                    className="CarouselImage"
-                    key={i}
-                    src={item.url}
-                    alt={`${i} Slide`}
-                  />
-                ))}
+              <Carousel data-bs-theme="dark" style={{ height: "20rem",width:'25rem'}}>
+                {product.images &&
+                  product.images.map((item, i) => (
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        key={i}
+                        src={item.url}
+                        alt={`${i} Slide`}
+                        style={{height:'20rem'}}
+                      />
+                    </Carousel.Item>
+                  ))}
+              </Carousel>
             </div>
 
             <div>
@@ -141,19 +145,28 @@ const ProductDetails = () => {
               </div>
               <div className="detailsBlock-2">
                 <div>{`₹${product.price}`}</div>
-                <Rating {...options} style={{fontSize:'1.2rem'}}/>
+                <Rating {...options} style={{ fontSize: "1.2rem" }} />
                 <span className="detailsBlock-2-span">
-                  &nbsp;
-                  ({product.numOfReviews} Reviews)
+                  &nbsp; ({product.numOfReviews} Reviews)
                 </span>
               </div>
               <div className="detailsBlock-3">
                 <div className="detailsBlock-3-1">
-                <div className="quantityTitle">Quantity:</div>
+                  <div className="quantityTitle">Quantity:</div>
                   <div className="detailsBlock-3-1-1">
-                    <button onClick={decreaseQuantity} style={{backgroundColor:'white'}}>-</button>
+                    <button
+                      onClick={decreaseQuantity}
+                      style={{ backgroundColor: "white" }}
+                    >
+                      -
+                    </button>
                     <div>{quantity}</div>
-                    <button onClick={increaseQuantity} style={{backgroundColor:'white'}}>+</button>
+                    <button
+                      onClick={increaseQuantity}
+                      style={{ backgroundColor: "white" }}
+                    >
+                      +
+                    </button>
                   </div>
                   <button
                     disabled={product.Stock < 1 ? true : false}

@@ -17,10 +17,11 @@
   
   .confirmshippingArea > p {
     color: #1e1e27;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
-    padding: 0.5rem;
-    width: 23%;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
     border-bottom: 3px solid #fe4c50;
   }
   
@@ -45,10 +46,11 @@
   
   .confirmCartItems > p {
     color: #1e1e27;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
-    padding: 0.5rem;
-    width: 26%;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
     border-bottom: 3px solid #fe4c50;
   }
   
@@ -91,12 +93,13 @@
   
   .orderSummary > p {
     text-align: center;
+    text-transform: uppercase;
     border-bottom: 3px solid #fe4c50;
     font-size: 1.3rem;
     color: #1e1e27;
-    font-weight: 500;
-    padding: 0.5rem;
-    width: 70%;
+    font-weight: 600;
+    width: max-content;
+    padding: 0.5rem 1rem;
     margin: auto auto 2rem auto;
     box-sizing: border-box;
   }

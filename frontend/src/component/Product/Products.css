@@ -1,11 +1,19 @@
+.productContainer{
+   padding: 3rem;
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   margin-top: 4.3rem;
+}
 .productsHeading {
-    margin: 2vmax auto;
-    width: 15vw;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
-    padding: 2vmax;
-    color: rgba(0, 0, 0, 0.678);
-    font: 500 1.5vmax "Roboto";
     text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #fe4c50;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    margin: 0 auto 2rem auto;
+    color: #1e1e27;
   }
   .products {
     display: flex;
@@ -57,25 +65,41 @@
     color: white;
     color: black;
   }
-  .filterBox{
-    width: 10vmax;
-    position: absolute;
-    top: 10vmax;
-    left: 4vmax;
-  }
   .categoryBox{
     padding: 0%;
+    margin-top: 0.5rem;
+  }
+  .sliderTitle{
+    color: #fe4c50;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .sliderWrapper{
+    padding: 0.5rem;
   }
   .category-link{
     list-style: none;
-    color: rgba(0, 0, 0, 0.61);
-    font: 400 0.8vmax "Roboto";
-    margin: 0.4vmax;
+    color: #1e1e27;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.5s;
+    padding: 0.5rem 1rem;
+    border: solid 1px #e5e5e5;
   }
   .category-link:hover{
-    color: tomato;
+    color: white;
+    background-color: #fe4c50;
+  }
+  .category-link.active{
+    color: white;
+    background-color: #fe4c50;
+  }
+  .category-link:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .category-link:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
   .filterBox > fieldset{
     border: none;

@@ -1,59 +1,7 @@
-/* .banner {
-    background-image: url("https://uploads-ssl.webflow.com/614d610a3dd0725153e51ded/6222149bfbdb5b0645ae4c0e_eCommerce-Website-Components-photo.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vmin;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-  
-  .banner > h1 {
-    margin: 5vmax;
-    font: 600 2.5vmax "Roboto";
-  }
-  
-  .banner > p {
-    font: 300 1.4vmax "Lucida Sans";
-  }
-  .banner span {
-    color: #0a67e3;
-  }
-  
-  .banner > a > button {
-    margin-bottom: 5vmax;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 0;
-    padding: 1vmax;
-    transition: all 0.5s;
-    width: 9vmax;
-    font: 500 1.2vmax "Roboto";
-  }
-  .banner > a > button:hover {
-    background-color: pink;
-    color: white;
-  }
-  
-  .banner::after {
-    content: "";
-    margin-top: 6rem;
-    width: 100vw;
-    height: 100vmin;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    max-width: 100%;
-  } */
-
   .carouselDiv{
     height: auto;
     width: auto;
-    margin: 2rem 3rem;
+    margin: 6.3rem 3rem 2rem 3rem;
   }
   
   .homeHeading {
@@ -61,15 +9,15 @@
     font-weight: 600;
     font-size: 1.5rem;
     border-bottom: 3px solid #fe4c50;
-    width: 20vmax;
-    padding: 0.5rem 0rem;
+    width: max-content;
+    padding: 0.5rem 1rem;
     margin: 0 auto 2rem auto;
     color: #1e1e27;
   }
   
   .container {
     display: flex;
-    margin: 2vmax auto;
+    margin: 3vmax auto;
     width: 80vw;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,7 +25,6 @@
   }
   
   .productCard {
-    width: 12rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,12 +32,12 @@
     text-decoration: none;
     margin: 2vmax;
     transition: all 0.5s;
-    /* border: 2px solid black; */
   }
   
   .productCard > img {
-    width: 14vmax;
-    padding: 1.5rem;
+    width: 14rem;
+    height: 12rem;
+    padding: 1rem;
   }
   
   .productCard > div {
@@ -119,20 +66,6 @@
     color: #fe4c50;
     font-size: 1rem;
     font-weight: 500;
-  }
-
-  .addToCartButton{
-    width: 100%;
-  }
-
-  .addToCartButton > button{
-    border: none;
-    width: 100%;
-    color: #ffffff;
-    font-weight: 600;
-    background-color: #fe4c50;
-    margin-top: 1rem;
-    padding: 0.4rem 0rem;
   }
   
   .productCard:hover {

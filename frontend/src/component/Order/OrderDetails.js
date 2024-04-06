@@ -9,10 +9,9 @@ import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 
 const OrderDetails = () => {
-  
   const { order, error, loading } = useSelector((state) => state.orderDetails);
   console.log(order);
-  if(typeof order!="undefined"){
+  if (typeof order != "undefined") {
     console.log(order.shippingInfo);
   }
 
@@ -35,11 +34,9 @@ const OrderDetails = () => {
       ) : (
         <Fragment>
           <MetaData title="Order Details" />
+          <div className="orderNumHeading">Order #{order && order._id}</div>
           <div className="orderDetailsPage">
             <div className="orderDetailsContainer">
-              <Typography component="h1">
-                Order #{order && order._id}
-              </Typography>
               <Typography>Shipping Info</Typography>
               <div className="orderDetailsContainerBox">
                 <div>
@@ -105,7 +102,7 @@ const OrderDetails = () => {
               <div className="orderDetailsCartItemsContainer">
                 {order.orderItems &&
                   order.orderItems.map((item) => (
-                    <div key={item.product}>
+                    <div key={item.product} className="orderDetailRow">
                       <img src={item.image} alt="Product" />
                       <Link to={`/product/${item.product}`}>
                         {item.name}
