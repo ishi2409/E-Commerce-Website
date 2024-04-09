@@ -96,7 +96,7 @@ const Contact = () => {
                   <label for="floatingTextArea">Write Your query here*</label>
                 </div>
               </div>
-              <div class="btn">
+              <div class="buttonDiv">
                 <button onClick="onSubmit()">SUBMIT</button>
               </div>
             </div>

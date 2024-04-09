@@ -122,7 +122,14 @@ const ProductDetails = () => {
           <MetaData title={`${product.name} -- ECOMMERCE`} />
           <div className="ProductDetails">
             <div>
-              <Carousel data-bs-theme="dark" style={{ height: "20rem",width:'25rem'}}>
+              <Carousel
+                className="carouselWrapper"
+                data-bs-theme="dark"
+                style={{
+                  height: "calc(12rem + 8vmax)",
+                  width: "calc(10rem + 15vmax)",
+                }}
+              >
                 {product.images &&
                   product.images.map((item, i) => (
                     <Carousel.Item>
@@ -131,42 +138,49 @@ const ProductDetails = () => {
                         key={i}
                         src={item.url}
                         alt={`${i} Slide`}
-                        style={{height:'20rem'}}
+                        style={{ height: "calc(12rem + 8vmax)" }}
                       />
                     </Carousel.Item>
                   ))}
               </Carousel>
             </div>
 
-            <div>
+            <div className="productDetailWrapper">
               <div className="detailsBlock-1">
-                <h2>{product.name}</h2>
+                <div className="productDetailsTitle">{product.name}</div>
                 <p>Product # {product._id}</p>
               </div>
               <div className="detailsBlock-2">
-                <div>{`₹${product.price}`}</div>
-                <Rating {...options} style={{ fontSize: "1.2rem" }} />
-                <span className="detailsBlock-2-span">
-                  &nbsp; ({product.numOfReviews} Reviews)
-                </span>
+                <div className="productPrice">{`$ ${product.price}`}</div>
+                <div className="reviewWrapper">
+                  <Rating
+                    {...options}
+                    style={{ fontSize: "calc(0.9rem + 0.4vmax)" }}
+                  />
+                  <span className="detailsBlock-2-span">
+                    &nbsp; ({product.numOfReviews} Reviews)
+                  </span>
+                </div>
               </div>
               <div className="detailsBlock-3">
                 <div className="detailsBlock-3-1">
-                  <div className="quantityTitle">Quantity:</div>
-                  <div className="detailsBlock-3-1-1">
-                    <button
-                      onClick={decreaseQuantity}
-                      style={{ backgroundColor: "white" }}
-                    >
-                      -
-                    </button>
-                    <div>{quantity}</div>
-                    <button
-                      onClick={increaseQuantity}
-                      style={{ backgroundColor: "white" }}
-                    >
-                      +
-                    </button>
+                  <div className="quantityWrapper">
+                    <div className="quantityTitle">Quantity:</div>
+                    <div className="detailsBlock-3-1-1">
+                      <button
+                        onClick={decreaseQuantity}
+                        style={{ backgroundColor: "white" }}
+                      >
+                        -
+                      </button>
+                      <div>{quantity}</div>
+                      <button
+                        onClick={increaseQuantity}
+                        style={{ backgroundColor: "white" }}
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                   <button
                     disabled={product.Stock < 1 ? true : false}

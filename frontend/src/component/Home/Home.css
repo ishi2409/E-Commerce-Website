@@ -1,23 +1,23 @@
   .carouselDiv{
     height: auto;
     width: auto;
-    margin: 6.3rem 3rem 2rem 3rem;
+    margin: calc(4rem + 2.3vmax) 3vmax 2vmax 3vmax;
   }
   
   .homeHeading {
     text-align: center;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 0.5vmax);
     border-bottom: 3px solid #fe4c50;
     width: max-content;
-    padding: 0.5rem 1rem;
-    margin: 0 auto 2rem auto;
+    padding: 0.5rem calc(0.7rem + 0.3vmax);
+    margin: 0 auto 2vmax auto;
     color: #1e1e27;
   }
   
   .container {
     display: flex;
-    margin: 3vmax auto;
+    margin: 2vmax auto 3vmax auto;
     width: 80vw;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,14 +30,14 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 2vmax;
+    margin: 1vmax;
     transition: all 0.5s;
   }
   
   .productCard > img {
-    width: 14rem;
-    height: 12rem;
-    padding: 1rem;
+    width: calc(6rem + 8vmax);
+    height: calc(4.5rem + 8vmax);
+    padding: 1vmax;
   }
   
   .productCard > div {
@@ -45,16 +45,16 @@
     justify-content: flex-start;
     align-items: center;
     color: #1e1e27;
-    margin-top: 0.7rem;
+    margin-top: 0.7vmax;
   }
   
   .productCardSpan {
     margin: 0.5vmax;
-    font: 500 0.7vmax;
+    font-weight: 500;
   }
   
   .productCard > p {
-    font-size: 1.2rem;
+    font-size: calc(0.9rem + 0.3vmax);
     margin: 1vmax 0.5vmax;
     margin-bottom: 0;
     color: #1e1e27;
@@ -64,32 +64,17 @@
   .productCard > span {
     margin: 0.5vmax;
     color: #fe4c50;
-    font-size: 1rem;
+    font-size: calc(0.9rem + 0.3vmax);
     font-weight: 500;
   }
   
   .productCard:hover {
     box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
-  
     transform: translateY(-1vmax);
   }
-  
-  @media screen and (max-width: 600px) {
-    .productCard > p {
-      font-size: 1.7vmax;
-    }
-  
-    .productCard > div {
-      margin: 0vmax;
-      display: block;
-    }
-  
-    .productCard > span {
-      font-size: 1.5vmax;
-    }
-  
-    .productCard > div > span {
-      margin: 0 0.5vmax;
-      font: 300 1vmax "Roboto";
+
+  @media (max-width: 800px) {
+    .carouselDiv{
+      margin-top: calc(7.5rem + 1.5vmax);
     }
   }

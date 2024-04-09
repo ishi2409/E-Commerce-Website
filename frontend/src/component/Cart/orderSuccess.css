@@ -25,11 +25,6 @@
     text-decoration: none;
     margin: 2vmax;
   }
-  @media screen and (max-width: 900px) {
-    footer{
-      margin-top: 8rem;
-    }
-  }
   
   @media screen and (max-width: 600px) {
     .orderSuccess > a {

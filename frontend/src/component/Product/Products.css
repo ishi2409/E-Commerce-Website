@@ -1,24 +1,24 @@
 .productContainer{
-   padding: 3rem;
+   padding: 3vmax;
    display: grid;
    grid-template-columns: 1fr 4fr;
-   margin-top: 4.3rem;
+   margin-top: calc(2rem + 2.3vmax);
 }
 .productsHeading {
     text-align: center;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 0.5vmax);
     text-transform: uppercase;
     border-bottom: 3px solid #fe4c50;
     width: max-content;
-    padding: 0.5rem 1rem;
-    margin: 0 auto 2rem auto;
+    padding: 0.5rem 1vmax;
+    margin: 0 auto 2vmax auto;
     color: #1e1e27;
   }
   .products {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5vmax;
+    padding: 0 2vmax;
     justify-content: center;
     min-height: 30vh;
   }
@@ -72,7 +72,7 @@
   .sliderTitle{
     color: #fe4c50;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: calc(0.9rem + 0.3vmax);
   }
   .sliderWrapper{
     padding: 0.5rem;
@@ -104,16 +104,56 @@
   .filterBox > fieldset{
     border: none;
   }
-  @media screen and (max-width: 600px) {
-    .filterBox {
-      width: 20vmax;
-      position: static;
-      margin: auto;
+  .filterButton{
+    background-color: #e5e5e5;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    left: 0;
+  }
+  @media screen and (max-width: 800px) {
+    .productContainer{
+      margin-top: calc(6rem + 2.3vmax);
     }
-    .page-link {
-      font: 300 1.7vmax "Roboto";
+  }
+  @media (max-width:600px) {
+    .productContainer{
+      display: flex;
+      min-height: 90vh;
+      padding: 3vmax 1vmax;
     }
-    .category-link {
-      font: 400 1.8vmax "Roboto";
+    .products{
+      padding: 0;
+    }
+    .productWrapper{
+      width: 100%;
+    }
+    .filterTitleWrapper{
+      display: flex;
+    }
+    .filterButton{
+      position: absolute;
+      margin-top: 1vmax;
+      padding: 0.5rem 3vmax 0.5rem 2vmax;
+    }
+    .filterBox{
+      width: 0;
+      overflow: hidden;
+      position: absolute;
+      margin-top: -3vmax;
+      left: 0;
+      transition: all 0.5s ease-in-out;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      z-index: 99;
+    }
+    .filterTitleWrapper{
+      display: flex;
+    }
+    .showFilterBox{
+      width: calc(12rem + 6vmax);
+      padding: 2vmax;
+    }
+    .crossIcon{
+      margin-left: auto;
     }
   }

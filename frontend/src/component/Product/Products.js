@@ -10,6 +10,8 @@ import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
 import MetaData from "../layout/MetaData";
 import { useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilter, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const categories = [
   "Laptop",
@@ -31,6 +33,8 @@ const Products = () => {
   const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
   const [activeCategory, setActiveCategory] = useState("");
+  const [width, setWidth] = useState(window.innerWidth);
+  const [isOpen, setOpen] = useState(false);
 
   const {
     products,
@@ -58,6 +62,14 @@ const Products = () => {
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
   }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
 
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
   return (
     <Fragment>
       {loading ? (
@@ -66,8 +78,15 @@ const Products = () => {
         <Fragment>
           <MetaData title="PRODUCTS -- ECOMMERCE" />
           <div className="productContainer">
-            <div className="filterBox">
-              <div className="sliderTitle">Categories</div>
+            <div className={`filterBox ${isOpen ? "showFilterBox" : ""}`}>
+              <div className="filterTitleWrapper">
+                <div className="sliderTitle">Categories</div>
+                {width < 600 && (
+                  <div className="crossIcon">
+                    <FontAwesomeIcon icon={faXmark} style={{height: 'calc(1.2rem + 0.3vmax)'}} onClick={() => setOpen((prev) => !prev)}/>
+                  </div>
+                )}
+              </div>
               <ul className="categoryBox">
                 {categories.map((category) => (
                   <li
@@ -120,8 +139,18 @@ const Products = () => {
               </fieldset>
             </div>
             <div className="productWrapper">
-              <h2 className="productsHeading">Products</h2>
-
+              <div className="filterTitleWrapper">
+                {width < 600 && (
+                  <div className="filterButton">
+                    <FontAwesomeIcon
+                      icon={faFilter}
+                      style={{ height: "calc(1.2rem + 0.5vmax)" }}
+                      onClick={() => setOpen((prev) => !prev)}
+                    />
+                  </div>
+                )}
+                <div className="productsHeading">Products</div>
+              </div>
               <div className="products">
                 {products &&
                   products.map((product) => (
@@ -129,23 +158,23 @@ const Products = () => {
                   ))}
               </div>
               {resultPerPage < count && (
-              <div className="paginationBox">
-                <Pagination
-                  activePage={currentPage}
-                  itemsCountPerPage={resultPerPage}
-                  totalItemsCount={productsCount}
-                  onChange={setCurrentPageNo}
-                  nextPageText="Next"
-                  prevPageText="Prev"
-                  firstPageText="1st"
-                  lastPageText="Last"
-                  itemClass="page-item"
-                  linkClass="page-link"
-                  activeClass="pageItemActive"
-                  activeLinkClass="pageLinkActive"
-                />
-              </div>
-            )}
+                <div className="paginationBox">
+                  <Pagination
+                    activePage={currentPage}
+                    itemsCountPerPage={resultPerPage}
+                    totalItemsCount={productsCount}
+                    onChange={setCurrentPageNo}
+                    nextPageText="Next"
+                    prevPageText="Prev"
+                    firstPageText="1st"
+                    lastPageText="Last"
+                    itemClass="page-item"
+                    linkClass="page-link"
+                    activeClass="pageItemActive"
+                    activeLinkClass="pageLinkActive"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </Fragment>

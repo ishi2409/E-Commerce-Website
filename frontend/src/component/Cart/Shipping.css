@@ -1,17 +1,16 @@
 .shippingContainer {
   width: 100vw;
-  min-height: 100vh;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0rem;
+  padding: 5vmax 0rem;
 }
   
   .shippingBox {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 30vw;
+    width: calc(10rem + 15vmax);
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -20,11 +19,11 @@
     text-align: center;
     text-transform: uppercase;
     color: #1e1e27;
-    font-weight: 500;
+    font-weight: 600;
     border-bottom: 2px solid #fe4c50;
     width: max-content;
     padding: 0.5rem 1rem;
-    margin: 1rem auto;
+    margin: 1vmax auto;
   }
   
   .shippingForm {
@@ -42,12 +41,12 @@
     display: flex;
     width: 100%;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5vmax;
   }
   
   .shippingForm > div > input,
   .shippingForm > div > select {
-    padding: 1vmax 4vmax;
+    padding: 0.9vmax 3vmax;
     padding-right: 1vmax;
     width: 100%;
     box-sizing: border-box;
@@ -74,7 +73,7 @@
     text-transform: uppercase;
     transition: all 0.5s;
     outline: none;
-    margin-top: 1rem;
+    margin-top: 1vmax;
     border-radius: 2px;
   }
   
@@ -83,7 +82,7 @@
   }
   
   @media screen and (max-width: 600px) {
-    .shippingBox {
+    /* .shippingBox {
       width: 100vw;
       height: 160vh;
     }
@@ -117,19 +116,19 @@
    }
    footer{
     margin-top: 0rem;
-   }
+   } */
   }
 
   @media screen and (min-width: 600px) and (max-width:950px) {
-    .shippingBox{
+    /* .shippingBox{
       width: 50%;
     }
     .shippingForm{
        width: 80%;
-    }
+    } */
   }
   @media screen and (max-width:350px) {
-    .shippingBox {
+    /* .shippingBox {
       width: 100vw;
       height: 110vh;
     }
@@ -141,5 +140,5 @@
       padding: 3vw 10vw;
       font: 300 4vw cursive;
       margin: 1rem 0rem ;
-    }
+    } */
   }

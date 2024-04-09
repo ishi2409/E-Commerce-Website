@@ -1,6 +1,7 @@
 footer {
-    padding: 3rem;
+    padding: 3vmax;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
   }
 
   .details{
@@ -10,9 +11,9 @@ footer {
   .navLinks{
     text-decoration: none;
     color: #51545f;
-    margin-right: 3rem;
-    font-size: 1.1rem;
-    font-weight: 400;
+    margin-right: calc(2rem + 1vmax);
+    font-size: calc(0.9rem + 0.2vmax);
+    font-weight: 500;
   }
 
   .navLinks:hover{
@@ -23,13 +24,13 @@ footer {
     margin-left: auto;
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: calc(0.9rem + 0.2vmax);
   }
 
   .mediaDetails > a{
     text-decoration: none;
     color: #51545f;
-    margin-left: 2rem;
+    margin-left: calc(1.2rem + 0.8vmax);
   }
 
   .mediaDetails > a:hover{
@@ -37,18 +38,26 @@ footer {
   }
 
   .footerContainer{
-    margin-top: 3rem;
+    margin-top: 3vmax;
   }
   
   .midFooter {
-    margin-top: 2rem;
+    margin-top: calc(1.5rem + 0.5vmax);
     color: #51545f;
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: calc(0.8rem + 0.1vmax);
+    font-weight: 500;
   }
   
-@media (max-width:500px){
-  #footer{
+@media (max-width:600px){
+  .details{
+    display: flex;
+    flex-direction: column;
+  }
+  .mediaDetails{
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  /* #footer{
     padding: 0.5rem;
   }
    #footer .leftFooter > h4{
@@ -59,10 +68,10 @@ footer {
   }
   .midFooter > p {
     font-size: 0.8rem;
-  }
+  } */
 }
 @media (max-width:335px){
-  #footer .leftFooter > h4{
+  /* #footer .leftFooter > h4{
      font-size: 0.35rem;
-  }
+  } */
 }    

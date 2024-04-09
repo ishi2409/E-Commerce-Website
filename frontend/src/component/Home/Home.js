@@ -31,19 +31,16 @@ const Home = () => {
           <MetaData title="ECOMMERCE" />
           <MetaData title="ECOMMERCE" />
           <div className="carouselDiv">
-            <Carousel data-bs-theme="dark" style={{height:'33rem'}}>
+            <Carousel data-bs-theme="dark" style={{height:'calc(10rem + 25vmax)'}}>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
                   src="https://img.freepik.com/free-photo/cute-woman-with-red-lipstick-looks-into-camera-poses-with-white-big-bags-after-good-shopping_197531-17594.jpg"
                   alt="First slide"
-                  style={{height:'33rem'}}
+                  style={{height:'calc(10rem + 25vmax)'}}
                 />
                 <Carousel.Caption style={{fontWeight:'600'}}>
                   <h5>First slide label</h5>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -51,13 +48,10 @@ const Home = () => {
                   className="d-block w-100"
                   src="https://img.freepik.com/free-photo/portrait-happy-lady-sunglasses-standing-with-colorful-shopping-bags-hands-pink-background-young-woman-standing-white-shirt-denim-shorts_574295-1182.jpg"
                   alt="Second slide"
-                  style={{height:'33rem'}}
+                  style={{height:'calc(10rem + 25vmax)'}}
                 />
                 <Carousel.Caption style={{fontWeight:'600'}}>
                   <h5>Second slide label</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -65,22 +59,18 @@ const Home = () => {
                   className="d-block w-100"
                   src="https://img.freepik.com/premium-photo/portrait-her-she-nice-attractive-cheerful-cheery-girl-carrying-new-clothing-things-spending-holiday-isolated-bright-vivid-shine-vibrant-green-blue-turquoise-color-wall_274222-15637.jpg"
                   alt="Third slide"
-                  style={{height:'33rem'}}
+                  style={{height:'calc(10rem + 25vmax)'}}
                 />
                 <Carousel.Caption style={{fontWeight:'600'}}>
                   <h5>Third slide label</h5>
-                  <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl
-                    consectetur.
-                  </p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
           </div>
 
-          <h2 className="homeHeading" id="container">
+          <div className="homeHeading" id="container">
             LATEST PRODUCTS
-          </h2>
+          </div>
           <div className="container">
             {products &&
               products.map((product) => (

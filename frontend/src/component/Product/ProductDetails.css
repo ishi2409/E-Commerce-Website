@@ -2,10 +2,10 @@
     background-color: rgb(255, 255, 255);
     width: 100vw;
     max-width: 100%;
-    padding: 2rem 3rem;
+    padding: 2rem 3vmax;
     box-sizing: border-box;
     display: flex;
-    margin-top: 5.3rem;
+    margin-top: calc(4rem + 2vmax);
   }
   
   .ProductDetails > div {
@@ -23,9 +23,10 @@
     align-items: flex-start;
   }
   
-  .detailsBlock-1 > h2 {
-    color: #282828;;
+  .detailsBlock-1 > .productDetailsTitle {
+    color: #282828;
     font-weight: 600;
+    font-size: calc(1rem + 0.5vmax);
   }
   
   .detailsBlock-1 > p {
@@ -40,24 +41,24 @@
     align-items: center;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    width: 80%;
+    width: 95%;
     padding: 1vmax 0;
   }
   
   .detailsBlock-2-span {
     color: #51545f;
-    font-size: 0.9rem;
+    font-size: calc(0.7rem + 0.2vmax);
   }
 
-  .detailsBlock-2 > div {
-    font-size: 1.5rem;
+  .detailsBlock-2 > .productPrice {
+    font-size: calc(0.8rem + 0.5vmax);
     color: #fe4c50;
     font-weight: 500;
     margin-right: 2rem;
   }
   
   .detailsBlock-3 {
-    width: 80%;
+    width: 95%;
   }
   
   .detailsBlock-3-1 {
@@ -69,6 +70,12 @@
     color: #232530;
     margin-right: 1.5rem;
     font-weight: 500;
+    font-size: calc(0.8rem + 0.3vmax);
+  }
+
+  .quantityWrapper{
+    display: flex;
+    align-items: center;
   }
    
   .detailsBlock-3-1-1{
@@ -78,6 +85,7 @@
     align-items: center;
     border: 2px solid #e5e5e5;
     padding: 0rem 0.5rem;
+    margin-right: 1vmax;
   }
 
   .detailsBlock-3-1-1 > button {
@@ -85,7 +93,7 @@
     cursor: pointer;
     color: #232530;
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 0.5vmax);
   }
   
   .detailsBlock-3-1-1 > input {
@@ -99,14 +107,16 @@
   }
 
   .detailsBlock-3-1-1 > div {
-    width: 2.5rem;
+    width: 2.5vmax;
     text-align: center;
     color: #232530;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.2vmax);
   }
   
   .detailsBlock-3-1 > button:last-child {
+    display: flex;
+    align-items: center;
     border: none;
     cursor: pointer;
     color: white;
@@ -116,9 +126,9 @@
     border-radius: 2px;
     padding: 0.5rem 0.7rem;
     text-transform: uppercase;
-    margin: 1vmax;
+    margin: 1vmax 0;
     outline: none;
-    margin-left: 1rem;
+    font-size: calc(0.8rem + 0.3vmax);
   }
   
   .detailsBlock-3-1 > button:last-child:hover {
@@ -166,6 +176,7 @@
     transition: all 0.5s;
     outline: none;
     text-transform: uppercase;
+    font-size: calc(0.8rem + 0.3vmax);
   }
 
   .submitReview:hover {
@@ -188,7 +199,7 @@
   .reviewsHeading {
     text-align: center;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: calc(1.2rem + 0.3vmax);
     border-bottom: 3px solid #fe4c50;
     width: max-content;
     padding: 0.5rem 1rem;
@@ -197,7 +208,7 @@
   }
 
   .reviews {
-    padding: 3rem;
+    padding: 3vmax 4vmax;
     display: grid;
     overflow: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -217,102 +228,94 @@
     width: 5vmax;
     margin-bottom: 0.6rem;
   }
-  .reviewCard > p {
+  .reviwerName {
+    font-size: calc(0.8rem + 0.2vmax);
     color: #232530;
+    margin-bottom: 0.5rem;
   }
   .reviewCardComment {
+    font-size: calc(0.8rem + 0.2vmax);
     color: #232530;
   }
   
   .noReviews {
-    font-size: 1.1rem;
+    font-size: calc(0.9rem + 0.2vmax);
     font-weight: 500;
     text-align: center;
     color: #232530;
   }
-  
-  @media screen and (max-width: 600px) {
-    .ProductDetails {
-      flex-direction: column;
-      height: unset;
+
+  .detailsBlock-2 > .reviewWrapper{
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) and (min-width:650px){
+    .carouselDiv{
+      margin-top: calc(7rem + 1.5vmax);
     }
-  
-    .ProductDetails > div:last-child {
+    .detailsBlock-3-1{
+      flex-direction: column;
+      align-items: flex-start;
+    } 
+    .detailsBlock-2{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .detailsBlock-2 > .reviewWrapper{
+      display: flex;
       align-items: center;
     }
-  
-    .detailsBlock-1 > h2 {
-      font-size: 2.8vmax;
-      text-align: center;
-    }
-  
-    .detailsBlock-1 > p {
-      text-align: center;
-      font-size: 1vmax;
-    }
-  
-    .detailsBlock-2 {
-      justify-content: center;
-    }
-    .detailsBlock-2 > span {
-      font-size: 1.5vmax;
-    }
-  
-    .detailsBlock-3 > h1 {
-      font: 700 3vmax "Franklin Gothic Medium";
-      text-align: center;
-    }
-  
-    .detailsBlock-3-1 {
-      flex-direction: column;
-    }
-  
-    .detailsBlock-3-1-1 {
-      padding: 2vmax 0;
-    }
-    .detailsBlock-3-1-1 > button {
-      padding: 1.2vmax;
-      width: 4vmax;
-    }
-  
-    .detailsBlock-3-1-1 > input {
-      padding: 1.5vmax;
-      width: 3vmax;
-      font: 400 1.8vmax "Roboto";
-    }
-  
-    .detailsBlock-3-1 > button:last-child {
-      font: 500 1.7vmax "Roboto";
-      padding: 1.5vmax;
-      width: 20vmax;
-      margin: 3vmax 0;
-    }
-  
-    .detailsBlock-3 > p {
-      padding: 2.5vmax 0;
-      text-align: center;
-      font: 400 2vmax "Roboto";
-    }
-  
-    .detailsBlock-4 {
-      font: 500 2.5vmax sans-serif;
-    }
-  
-    .detailsBlock-4 > p {
-      font: 300 1.8vmax sans-serif;
-    }
-  
-    .submitReview {
-      font: 500 1.7vmax "Roboto";
-      padding: 1.5vmax;
-      width: 20vmax;
-      margin: 3vmax 0;
-    }
-  
-    .reviewCard > p {
-      font: 600 3vw "Roboto";
-    }
-    .reviewCardComment {
-      font: 300 5vw cursive;
+    .detailsBlock-3-1-1{
+      margin-top: 0.5rem;
     }
   }
+  
+  @media (max-width: 650px) {
+    .ProductDetails {
+      margin-top: calc(4rem + 3vmax);
+      flex-direction: column;
+      height: unset;
+      padding-bottom: 0;
+    }
+
+    .productDetailWrapper{
+      padding: 2rem;
+    }
+
+    .detailsBlock-2{
+      width: 100%;
+    }
+
+    .detailsBlock-3{
+      width: 100%;
+    }
+
+    .d-block{
+      width: 100%;
+    }
+
+    .carouselWrapper{
+      width: 100% !important;
+    }
+
+    .reviews{
+      grid-template-columns: repeat( auto-fit, minmax(170px, 1fr) );
+    }
+
+    .detailsBlock-3-1 > button:last-child , .submitReview{
+      padding: 0.5rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  /* @media (max-width:450px) {
+    .detailsBlock-3-1{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .detailsBlock-3-1-1{
+      margin-top: 0.5rem;
+    }
+  } */

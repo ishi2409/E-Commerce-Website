@@ -35,15 +35,18 @@
   font-size: 0.9rem;
 }
 
-@media screen and (max-width: 600px) {
-  .searchBox > input[type="text"] {
+@media (max-width: 800px) {
+  .searchBox{
+    position: absolute;
+    top: calc(3rem + 1.2vmax);
+    left: 0;
     width: 100%;
-    height: 10%;
+    background-color: white;
+    padding: 0.6rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+}
 
-  .searchBox > input[type="submit"] {
-    height: 10%;
-    width: 30%;
-    font: 300 4vw "Roboto";
-  }
+@media screen and (max-width: 600px) {
+  
 }

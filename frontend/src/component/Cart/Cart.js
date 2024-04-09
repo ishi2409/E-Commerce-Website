@@ -84,7 +84,7 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-                  <p className="cartSubtotal">{`₹${
+                  <p className="cartSubtotal">{`$ ${
                     item.price * item.quantity
                   }`}</p>
                 </div>
@@ -93,8 +93,8 @@ const Cart = () => {
             <div className="cartGrossProfit">
               <div></div>
               <div className="cartGrossProfitBox">
-                <div>Gross Total</div>
-                <div style={{marginRight:'0.4rem'}}>{`₹${cartItems.reduce(
+                <div>Total</div>
+                <div style={{marginRight:'0.4rem'}}>{`$ ${cartItems.reduce(
                   (acc, item) => acc + item.quantity * item.price,
                   0
                 )}`}</div>

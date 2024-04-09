@@ -13,7 +13,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Search from "../../Product/Search";
 
-const Header = () => {
+const Header = ({ isSearch }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
   const navigate = useNavigate();
@@ -21,8 +21,10 @@ const Header = () => {
   const [click, setclick] = useState(true);
   const [hovered, setHovered] = useState(false);
   const [divHovered, divSetHovered] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const handleMouseEnter = () => {
+    if(isOpen == false)
     setHovered(true);
   };
 
@@ -83,7 +85,7 @@ const Header = () => {
             COLO<span>SHOP</span>
           </a>
         </div>
-        <Search />
+        {!isSearch && <Search />}
         <div className="navbarSiderOption">
           <ul>
             {isAuthenticated ? (
@@ -92,6 +94,7 @@ const Header = () => {
                   class="navItem"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  onClick={() => setOpen((prev) => !prev)}
                 >
                   <a class="navLink" href="#" id="navbarDropdown">
                     <img
@@ -108,6 +111,13 @@ const Header = () => {
                 <div
                   className={`dropdownMenu ${
                     hovered || divHovered
+                      ? user.role == "admin"
+                        ? "showDropdownAdmin"
+                        : "showDropdown"
+                      : ""
+                  }
+                  ${
+                    isOpen
                       ? user.role == "admin"
                         ? "showDropdownAdmin"
                         : "showDropdown"
@@ -136,9 +146,7 @@ const Header = () => {
                   <NavLink className="cartLogo" to="/cart" onClick={Clk}>
                     <ShoppingCartIcon
                       style={{
-                        marginRight: "0.4rem",
-                        height: "1.7rem",
-                        width: "auto",
+                        marginRight: "0.4vmax",
                       }}
                     />{" "}
                     Cart
@@ -156,9 +164,7 @@ const Header = () => {
                   <NavLink className="cartLogo" to="/login" onClick={Clk}>
                     <ShoppingCartIcon
                       style={{
-                        marginRight: "0.4rem",
-                        height: "1.7rem",
-                        width: "auto",
+                        marginRight: "0.4vmax",
                       }}
                     />{" "}
                     Cart
