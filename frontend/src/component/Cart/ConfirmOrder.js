@@ -5,6 +5,7 @@ import MetaData from "../layout/MetaData";
 import "./ConfirmOrder.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Typography } from "@material-ui/core";
+import axios from "axios";
 
 const ConfirmOrder = () => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
@@ -24,7 +25,7 @@ const ConfirmOrder = () => {
 
   const address = `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
 
-  const proceedToPayment = () => {
+  const proceedToPayment = async () => {
     const data = {
       subtotal,
       shippingCharges,
@@ -32,7 +33,12 @@ const ConfirmOrder = () => {
       totalPrice,
     };
     sessionStorage.setItem("orderInfo", JSON.stringify(data));
-    navigate("/process/payment");
+    let paymentData = await axios.post("/api/v1/payment");
+    console.log(paymentData);
+    // navigate("/process/payments");
+    if(paymentData && paymentData.data){
+      window.location.href = paymentData.data.links[1].href;
+    }
   };
 
   return (

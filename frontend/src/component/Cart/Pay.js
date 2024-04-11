@@ -16,7 +16,7 @@ const Pay = () => {
     });
     return (
         <>
-                <Payment />
+            <Payment />
         </>
     );
  

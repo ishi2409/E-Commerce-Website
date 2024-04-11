@@ -21,7 +21,6 @@ import ResetPassword from "./component/User/ResetPassword";
 import Cart from "./component/Cart/Cart";
 import Shipping from "./component/Cart/Shipping";
 import ConfirmOrder from "./component/Cart/ConfirmOrder";
-import Pay  from "./component/Cart/Pay"
 import OrderSuccess from "./component/Cart/OrderSuccess";
 import MyOrders from "./component/Order/MyOrders";
 import OrderDetails from "./component/Order/OrderDetails";
@@ -58,7 +57,7 @@ function App() {
   const location = useLocation();
   return (
     <>
-      <Header isSearch={(location.pathname === "/shipping") || (location.pathname === "/order/confirm") || (location.pathname === "/process/payment")}/>
+      <Header isSearch={(location.pathname === "/shipping") || (location.pathname === "/order/confirm") || (location.pathname === "/process/payments")}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/product/:id" element={<ProductDetails />} />
@@ -77,7 +76,6 @@ function App() {
         <Route exact path="/shipping" element={<Shipping />} />
         <Route exact path="/success" element={<OrderSuccess />} />
         <Route exact path="/orders" element={<MyOrders />} />
-        <Route exact path="/process/payment" element={<Pay />} />
         <Route exact path="/order/confirm" element={<ConfirmOrder />} />
         <Route exact path="/order/:id" element={<OrderDetails />} />
         <Route exact path="/admin/dashboard" element={<Dashboard />} />

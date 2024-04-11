@@ -37,23 +37,23 @@ export const getProduct =
   async (dispatch) => {
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
-      console.log("im inside");
+      // console.log("im inside");
       let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
       if (category) {
         link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
       }
-      console.log("im outside");
+      // console.log("im outside");
       const { data } = await axios.get(link);
-      console.log("im data");
+      // console.log("im data");
       // const { data } = await axios.get("/api/v1/products");
-      console.log("success")
+      // console.log("success")
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
         payload: data,
       });
     }
     catch (error) {
-      console.log("errrrrrrrr");
+      // console.log("errrrrrrrr");
       dispatch({
         type: ALL_PRODUCT_FAIL,
         payload: error.response.data.message,
@@ -155,13 +155,13 @@ export const deleteProduct = (id) => async (dispatch) => {
 
 // Get Products Details
 export const getProductDetails = (id) => async (dispatch) => {
-  console.log("hello"+id);
+  // console.log("hello"+id);
   try {
-    console.log(id);
+    // console.log(id);
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    console.log("jp");
+    // console.log("jp");
     const { data } = await axios.get(`/api/v1/product/${id}`);
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
       payload: data.product,

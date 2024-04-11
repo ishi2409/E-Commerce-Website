@@ -8,13 +8,14 @@
     text-align: center;
     text-transform: uppercase;
     color: #1e1e27;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.2rem;
     padding: 1vmax;
     border-bottom: 2px solid #fe4c50;
     width: max-content;
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .createProductForm {
@@ -88,15 +89,16 @@
     border: none;
     background-color:#fe4c50;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     width: auto;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1.5rem;
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.5s;
     outline: none;
     margin-bottom: 1rem;
     border-radius: 2px;
+    font-size: 1rem;
   }
   
   #createProductBtn:hover {
@@ -115,7 +117,6 @@
     .createProductForm > div > select,
     .createProductForm > div > textarea {
       padding: 2.5vmax 5vmax;
-      font: 300 1.7vmax cursive;
     }
   
     .createProductForm > div > svg {
@@ -129,11 +130,9 @@
   
     #createProductFormFile > input::file-selector-button {
       height: 7vh;
-      font: 400 1.8vmax cursive;
     }
   
     #createProductBtn {
-      font: 300 1.9vmax "Roboto";
       padding: 1.8vmax;
     }
   }

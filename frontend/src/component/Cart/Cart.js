@@ -94,7 +94,7 @@ const Cart = () => {
               <div></div>
               <div className="cartGrossProfitBox">
                 <div>Total</div>
-                <div style={{marginRight:'0.4rem'}}>{`$ ${cartItems.reduce(
+                <div>{`$ ${cartItems.reduce(
                   (acc, item) => acc + item.quantity * item.price,
                   0
                 )}`}</div>

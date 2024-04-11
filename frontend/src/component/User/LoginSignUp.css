@@ -14,21 +14,20 @@
   .LoginSignUpBox {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 30vw;
-    height: calc(12rem + 20vmax);
+    width: calc(17rem + 10vmax);
+    height: calc(20rem + 15vmax);
     box-sizing: border-box;
     overflow: hidden;
   }
 
   .login_signUp_toggle {
     display: flex;
-    height: 3vmax;
   }
 
   .login_signUp_toggle > div {
     color: #1e1e27;
     font-weight: 500;
-    padding: 1vmax;
+    padding: 1vmax 0rem;
     transition: all 0.5s;
     cursor: pointer;
     display: grid;
@@ -81,13 +80,14 @@
     border: 1px solid #e5e5e5;
     border-radius: 4px;
     outline: none;
+    font-size: calc(0.8rem + 0.2vmax);
   }
   
   .loginForm > div > svg,
   .signUpForm > div > svg {
     position: absolute;
     transform: translateX(1vmax);
-    font-size: 1.6vmax;
+    font-size: 1.7vmax;
     color: #1e1e27;
   }
   
@@ -139,13 +139,13 @@
     color: white;
     font-weight: 500;
     width: auto;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 2vmax;
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.5s;
     outline: none;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5vmax;
+    margin-bottom: 1vmax;
     border-radius: 2px;
   }
   
@@ -169,13 +169,17 @@
     transform: translateX(100%);
   }
 
-  @media screen and (max-width: 800px) {
-     .LoginSignUpBox {
-        width: 30vw;
-        height: 70vh;
-     }
-  }   
-  @media screen and (min-width:600px) and (max-width: 800px) {
+  @media screen and (max-width:500px) {
+    .LoginSignUpBox{
+      height: calc(20rem + 12vmax);
+      width: calc(15rem + 7vmax);
+    }
+    .login_signUp_toggle {
+      margin-bottom: -1vmax;
+    }
+  }
+  
+  /* @media screen and (min-width:600px) and (max-width: 800px) {
     .LoginSignUpBox{
       width: 40%;
     }
@@ -184,11 +188,6 @@
   @media screen and (max-width: 600px) {
     .LoginSignUpContainer {
       background-color: white;
-    }
-    .LoginSignUpBox {
-      width: 100vw;
-      height: 95vh;
-      margin-top: 8rem;
     }
     .login_signUp_toggle {
       height: 5vmax;
@@ -232,4 +231,4 @@
       font: 300 2vmax "Roboto";
       padding: 1.8vmax;
     }
-  }
+  } */
