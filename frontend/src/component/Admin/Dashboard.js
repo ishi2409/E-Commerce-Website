@@ -9,6 +9,26 @@ import { getAdminProduct } from "../../actions/productAction";
 import { getAllOrders } from "../../actions/orderAction.js";
 import { getAllUsers } from "../../actions/userAction.js";
 import MetaData from "../layout/MetaData";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -72,11 +92,11 @@ const Dashboard = () => {
         <Typography component="h1">Dashboard</Typography>
 
         <div className="dashboardSummary">
-          <div>
+          {/* <div>
             <p>
               Total Amount <br /> ₹{totalAmount}
             </p>
-          </div>
+          </div> */}
           <div className="dashboardSummaryBox2">
             <Link to="/admin/products">
               <p>Product</p>

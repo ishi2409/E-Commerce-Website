@@ -103,10 +103,10 @@ body{
   z-index: 100;
 }
 .showDropdown{
-  height: 11rem;
+  height: calc(8rem + 4vmax);
 }
 .showDropdownAdmin{
-  height: 15rem;
+  height: calc(14rem + 1vmax);
 }
 .dropdownMenu > button{
   border: none;
@@ -149,7 +149,7 @@ body{
     width: 100%;
     transition: all 0.3s ease-in-out;
   }
-  .showDropdown, .showDropdownAdmin{
+  .showDropdownClick, .showDropdownAdminClick{
     height: 100vh;
   }
 }

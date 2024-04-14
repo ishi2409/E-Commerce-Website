@@ -33,10 +33,8 @@ app.use("/api/v1", payment);
 
 paypal.configure({
   mode: "sandbox",
-  client_id:
-    "Aa2R-ccTaBbQcZSIbHSLo-XI-IO37gaMrSelEChjSd836OOX0BY9emCZbIA30xWUXCP1t9DuWQ5vFv4P",
-  client_secret:
-    "ENJXPu3aWmMHrfts6mE-hl8fs9Yaak1sLp3RACmsoQ7PApHclztO4oe1nAgz4qX0AsXGtg-EvOMPXYw7",
+  client_id:process.env.CLIENT_ID,
+  client_secret:process.env.CLIENT_SECRET,
 });
 
 app.post("/api/v1/payment", async (req, res) => {

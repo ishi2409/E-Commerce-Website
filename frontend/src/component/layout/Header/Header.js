@@ -110,17 +110,17 @@ const Header = ({ isSearch }) => {
                 </li>
                 <div
                   className={`dropdownMenu ${
-                    hovered || divHovered
+                    hovered || divHovered 
                       ? user.role == "admin"
                         ? "showDropdownAdmin"
                         : "showDropdown"
                       : ""
-                  }
+                  } 
                   ${
                     isOpen
                       ? user.role == "admin"
-                        ? "showDropdownAdmin"
-                        : "showDropdown"
+                        ? "showDropdownAdminClick"
+                        : "showDropdownClick"
                       : ""
                   }`}
                   onMouseEnter={handleMouseEnterInDiv}
