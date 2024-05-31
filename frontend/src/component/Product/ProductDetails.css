@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 2vmax;
+    padding: 2vmax 1vmax;
     box-sizing: border-box;
     border: 1px solid white;
   }
@@ -41,7 +41,7 @@
     align-items: center;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    width: 95%;
+    width: 97%;
     padding: 1vmax 0;
   }
   
@@ -58,7 +58,7 @@
   }
   
   .detailsBlock-3 {
-    width: 95%;
+    width: 97%;
   }
   
   .detailsBlock-3-1 {
@@ -248,6 +248,12 @@
   .detailsBlock-2 > .reviewWrapper{
     display: flex;
     align-items: center;
+  }
+
+  @media (max-width: 850px) and (min-width:650px){
+    .reviews{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   @media (max-width: 800px) and (min-width:650px){

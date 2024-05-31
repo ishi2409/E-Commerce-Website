@@ -43,14 +43,6 @@ const LoginSignUp = ({ history, location }) => {
     e.preventDefault();
     console.error(loginEmail);
     dispatch(login(loginEmail, loginPassword));
-    if (typeof error != "undefined" && error !== null) {
-      if (error.statusCode && error.statusCode >= 400) {
-        alert.success("Invalid data or email,please try again");
-        return;
-      }
-    }
-    alert.success("Login Succesfully");
-    navigate("/");
   };
 
   const registerSubmit = (e) => {
@@ -89,7 +81,8 @@ const LoginSignUp = ({ history, location }) => {
     }
 
     if (isAuthenticated) {
-      navigate("/account");
+      alert.success("Login Succesfully");
+      navigate("/");
     }
   }, [dispatch, error, alert, isAuthenticated]);
 

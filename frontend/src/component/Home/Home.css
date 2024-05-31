@@ -64,7 +64,7 @@
   .productCard > span {
     margin: 0.5vmax;
     color: #fe4c50;
-    font-size: calc(0.9rem + 0.3vmax);
+    font-size: calc(0.8em + 0.4vmax);
     font-weight: 500;
   }
   

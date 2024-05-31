@@ -22,6 +22,7 @@ const categories = [
 ];
 
 const Products = () => {
+  window.scrollTo(0, 0);
   const dispatch = useDispatch();
   const alert = useAlert();
   const { keyword } = useParams();
@@ -150,10 +151,13 @@ const Products = () => {
                 <div className="productsHeading">Products</div>
               </div>
               <div className="products">
-                {products &&
+              {!products ?
+                <p>Loading...</p> :
+                products &&
                   products.map((product) => (
-                    <ProductCard key={product._id} product={product} />
-                  ))}
+                  <ProductCard key={product._id} product={product} />
+                ))
+              }
               </div>
               {resultPerPage < count && (
                 <div className="paginationBox">

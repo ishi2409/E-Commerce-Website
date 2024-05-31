@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  api3:
+    image: ishika2409/myshop:02
+    ports:
+      - "80:4000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ishika
+      MONGO_INITDB_ROOT_PASSWORD: ishika1234

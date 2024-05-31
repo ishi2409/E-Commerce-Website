@@ -3,7 +3,7 @@ body{
 }
 .navbarDiv{
    display: flex;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   box-shadow: 0 0 8px #0006;
    position: fixed;
    top: 0;
    width: 100%;
@@ -45,12 +45,12 @@ body{
 .navbarSiderOption{
   display: flex;
   margin-left: auto;
-  padding-right: 1.2rem;
 }
 .navbarSiderOption ul{
   text-decoration: none;
   display: flex;
-  height: calc(3rem + 1.3vmax);
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .navbarSiderOption ul li{
   list-style: none;
@@ -96,14 +96,14 @@ body{
   right: 1rem;
   background-color: white;
   width: 13rem;
-  height: 0; /* Initially hide the dropdown */
+  height: 0;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 100;
 }
 .showDropdown{
-  height: calc(8rem + 4vmax);
+  height: calc(16.2rem + 2.5vmax);
 }
 .showDropdownAdmin{
   height: calc(14rem + 1vmax);
@@ -122,7 +122,7 @@ body{
   text-decoration: none;
   color: #1e1e27;
   padding: 1rem 1.2rem;
-  font-size: calc(0.9rem + 0.3vmax);
+  font-size: calc(0.9rem + 0.2vmax);
 }
 .dropdownItem:hover{
   color: #fe4c50;

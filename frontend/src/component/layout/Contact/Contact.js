@@ -4,6 +4,7 @@ import { Button } from "@material-ui/core";
 import Footer from "../Footer/Footer";
 
 const Contact = () => {
+  window.scrollTo(0, 0);
   return (
     <>
       <div className="contactContainer">

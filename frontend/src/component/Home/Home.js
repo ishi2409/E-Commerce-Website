@@ -11,6 +11,7 @@ import Carousel from "react-bootstrap/Carousel";
 import style from "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
+  window.scrollTo(0, 0);
   const alert = useAlert();
   const dispatch = useDispatch();
   let { loading, error, products } = useSelector((state) => state.products);
@@ -72,10 +73,13 @@ const Home = () => {
             LATEST PRODUCTS
           </div>
           <div className="container">
-            {products &&
+          {!products ?
+          <p>Loading...</p> :
+            products &&
               products.map((product) => (
                 <ProductCard key={product._id} product={product} />
-              ))}
+              ))
+          }
           </div>
         </Fragment>
       )}

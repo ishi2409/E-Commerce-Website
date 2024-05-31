@@ -152,6 +152,8 @@
     .showFilterBox{
       width: calc(12rem + 6vmax);
       padding: 2vmax;
+      height: 100vh;
+      position: fixed;
     }
     .crossIcon{
       margin-left: auto;

@@ -11,6 +11,8 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import HomeIcon from '@mui/icons-material/Home';
+import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import Search from "../../Product/Search";
 
 const Header = ({ isSearch }) => {
@@ -73,9 +75,6 @@ const Header = ({ isSearch }) => {
     alert.success("logout successfully");
     navigate("/");
   };
-
-  console.log(isAuthenticated);
-
   return (
     <>
       <nav className="navbarDiv">
@@ -127,6 +126,12 @@ const Header = ({ isSearch }) => {
                   onMouseLeave={handleMouseLeaveInDiv}
                 >
                   <Routing />
+                  <NavLink className="dropdownItem" to="/" onClick={Clk1}>
+                    <HomeIcon className="dropDownImage" /> Home
+                  </NavLink>
+                  <NavLink className="dropdownItem" to="/products" onClick={Clk1}>
+                    <LocalGroceryStoreIcon className="dropDownImage" /> Shop
+                  </NavLink>
                   <NavLink
                     className="dropdownItem"
                     to="/account"
@@ -155,6 +160,11 @@ const Header = ({ isSearch }) => {
               </>
             ) : (
               <>
+                <li className="navItem">
+                  <NavLink className="navLink" to="/products">
+                    Shop
+                  </NavLink>
+                </li>
                 <li className="navItem">
                   <NavLink className="navLink" to="/login">
                     SignIn

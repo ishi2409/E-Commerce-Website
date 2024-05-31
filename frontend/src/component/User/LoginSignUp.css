@@ -14,8 +14,7 @@
   .LoginSignUpBox {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: calc(17rem + 10vmax);
-    height: calc(20rem + 15vmax);
+    height: calc(19rem + 12vmax);
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -26,8 +25,8 @@
 
   .login_signUp_toggle > div {
     color: #1e1e27;
-    font-weight: 500;
-    padding: 1vmax 0rem;
+    font-weight: 600;
+    padding: 1vmax 0rem 0rem 0rem;
     transition: all 0.5s;
     cursor: pointer;
     display: grid;
@@ -73,7 +72,7 @@
 
   .loginForm > div > input,
   .signUpForm > div > input {
-    padding: 1vmax 4vmax;
+    padding: 0.8vmax 4vmax;
     padding-right: 1vmax;
     width: 100%;
     box-sizing: border-box;
@@ -144,8 +143,7 @@
     text-transform: uppercase;
     transition: all 0.5s;
     outline: none;
-    margin-top: 1.5vmax;
-    margin-bottom: 1vmax;
+    margin-top: 1vmax;
     border-radius: 2px;
   }
   
@@ -171,7 +169,7 @@
 
   @media screen and (max-width:500px) {
     .LoginSignUpBox{
-      height: calc(20rem + 12vmax);
+      height: calc(18rem + 14vmax);
       width: calc(15rem + 7vmax);
     }
     .login_signUp_toggle {
