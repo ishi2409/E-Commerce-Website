@@ -136,10 +136,10 @@ body{
 
 @media (max-width:600px) {
   .headerLogo img{
-    margin-left: -3vmax;
+    margin-left: -2vmax;
   }
   .cartLogo{
-    margin-right: -4vmax;
+    margin-right: -1vmax;
   }
   .dropdownMenu{
     position: absolute;
@@ -148,6 +148,9 @@ body{
     height: 0;
     width: 100%;
     transition: all 0.3s ease-in-out;
+  }
+  .shopTitle{
+    display: none;
   }
   .showDropdownClick, .showDropdownAdminClick{
     height: 100vh;
