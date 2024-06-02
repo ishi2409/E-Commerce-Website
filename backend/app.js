@@ -11,6 +11,7 @@ const errorMiddleware = require("./middleware/error");
 
 // Config
 // if (process.env.NODE_ENV !== "PRODUCTION") {
+//mongodb://localhost:27017/mydatabase
 require("dotenv").config({ path: "backend/config/config.env" });
 // }
 

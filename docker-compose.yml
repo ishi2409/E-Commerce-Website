@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   api3:
-    image: ishika2409/myshop:02
+    image: ishika2409/myshop:03
     ports:
       - "80:4000"
     depends_on:
