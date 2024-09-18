@@ -161,6 +161,11 @@ const Header = ({ isSearch }) => {
             ) : (
               <>
                 <li className="navItem">
+                  <NavLink className="navLink shopTitle" to="/products">
+                    Shop
+                  </NavLink>
+                </li>
+                <li className="navItem">
                   <NavLink className="navLink" to="/login">
                     SignIn
                   </NavLink>

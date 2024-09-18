@@ -118,7 +118,7 @@ const ProductDetails = () => {
       {loading ? (
         <Loader />
       ) : (
-        <Fragment>
+        <div style={{minHeight: '80vh'}}>
           <MetaData title={`${product.name} -- ECOMMERCE`} />
           <div className="ProductDetails">
             <div>
@@ -251,7 +251,7 @@ const ProductDetails = () => {
           ) : (
             <p className="noReviews">No Reviews Yet</p>
           )}
-        </Fragment>
+        </div>
       )}
     </>
   );
