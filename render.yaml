@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-app
+    env: node
+    buildCommand: |
+      cd client && npm install && npm run build && cd ..
+      npm install
+    startCommand: node server.js
+    repo: https://github.com/ishi2409/E-Commerce-Website
+    branch: main
+    envVars:
+      - key: NODE_ENV
+        value: production
